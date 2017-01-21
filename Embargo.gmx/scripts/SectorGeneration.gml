@@ -75,10 +75,8 @@ for (var i = 0; i < numGroups; i++){
                     closestj = sector.nodes[k]
                 }
             }
-            if (point_distance(closesti.x, closesti.y, closestj.x, closestj.y) < 250){
-                closesti.connections[closesti.numConnections] = closestj
-                closesti.numConnections++
-            }
+            closesti.connections[closesti.numConnections] = closestj
+            closesti.numConnections++
         }
     }
 }

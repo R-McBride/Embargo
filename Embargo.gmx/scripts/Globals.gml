@@ -1,17 +1,13 @@
 global.NUM_PLANETS = 20
 global.NUM_PLAYERS = 2
 
-global.NUM_NODE_TYPES = 4
 enum NODE_TYPES {
     PLANET = 0, 
     ASTEROID_BELT = 1,
-    OCEAN = 2,
-    NEBULA = 3
+    OCEAN = 2
     }
-
-global.NUM_RESOURCE_TYPES = 5 
-global.RESOURCE_RARITY = 3   
-enum RESOURCE_TYPES {
+    
+enum RESOUCE_TYPES {
     FOOD = 0 , 
     LABOR = 1 , LABOUR = 1 , 
     CAPITAL = 2 , 
