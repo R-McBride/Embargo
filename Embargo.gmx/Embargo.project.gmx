@@ -14,6 +14,12 @@
     <script>scripts\NodeConst.gml</script>
     <script>scripts\NodeDraw.gml</script>
     <script>scripts\Globals.gml</script>
+    <script>scripts\script5.gml</script>
+    <script>scripts\script6.gml</script>
+    <script>scripts\script7.gml</script>
+    <script>scripts\script8.gml</script>
+    <script>scripts\script9.gml</script>
+    <script>scripts\script10.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Node</object>
