@@ -43,4 +43,12 @@ for (var i = 0;i < numConnections;i++){
     draw_circle(x,y,3,false)
     draw_set_colour(c_red)
     draw_text(x+20,y+20, group)
+    
+    var j = 0
+    for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
+        if(resources[i] == true){
+            draw_sprite (spr_resourceIcons, i, x+10+(12*j), y-10)
+            j++
+        }
+    }
     //draw_circle(x,y,100,true)
