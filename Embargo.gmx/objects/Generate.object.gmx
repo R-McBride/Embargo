@@ -203,17 +203,29 @@ else
     }
 }
 
-
 with(Node)
 {
+    draw_set_colour(c_white)
+    draw_set_halign(fa_middle)
+    draw_set_font(fnt_tiny)
+
     if global.VIEW = VIEW_TYPE.RESOURCE or id = other.hover
     {
         var j = 0
         
         for (var i = 0; i &lt; global.NUM_RESOURCE_TYPES; i++){
             if(resources[i] != 0){
-                for(var ii = 0; ii &lt; resources[i]; ii++){
-                    draw_sprite (spr_resourceIcons, i, x+18+(14*ii), y-10+(14*j))
+                iii = 0
+                for(var ii = resources[i]; ii &gt; 0; ii--){
+                    if ii &gt;= 5{
+                    draw_sprite(spr_resourceIcons3, i, x+18+(14*iii), y-10+(14*j))
+                    ii -= 4
+                    }
+                    else{
+                    draw_sprite(spr_resourceIcons, i, x+18+(14*iii), y-10+(14*j))
+                    }
+                    
+                    iii += 1
                 }
                 draw_set_halign(fa_left)
                 j++

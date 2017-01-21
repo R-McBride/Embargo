@@ -1,12 +1,12 @@
 randomize()
 
-room_width = (1.6*global.MAP_SIZE)+100
-room_height = (.9*global.MAP_SIZE)+100
+room_width = (1.6*global.MAP_SIZE)+320
+room_height = (.9*global.MAP_SIZE)+180
 
 sector = instance_create(0,0,Sector)
 for (var i=0;i<global.NUM_PLANETS;i++){
-    ix = 50+random(1.6*global.MAP_SIZE)
-    iy = 50+random(.9*global.MAP_SIZE)
+    ix = 160+random(1.6*global.MAP_SIZE)
+    iy = 90+random(.9*global.MAP_SIZE)
     
     if i>0
     {
