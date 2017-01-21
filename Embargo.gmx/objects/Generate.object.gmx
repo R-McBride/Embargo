@@ -194,7 +194,7 @@ else
     {
         draw_set_colour(c_white)
         for (var i = 0;i &lt; numConnections;i++){
-            if(connections[i] == global.selected){
+            if(connections[i] == global.selectedNode){
                 draw_set_colour(c_lime)
             }
             draw_line(x,y,connections[i].x,connections[i].y)
