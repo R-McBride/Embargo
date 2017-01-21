@@ -18,7 +18,10 @@ for (var i = 0;i < numConnections;i++){
             break
         case (NODE_TYPES.NEBULA):
             draw_set_colour(c_yellow)
-            break            
+            break        
+        case (NODE_TYPES.BLACK_HOLE):
+            draw_set_colour(c_purple)
+            break      
     }
     draw_circle(x,y,10,true)
     
@@ -50,10 +53,10 @@ for (var i = 0;i < numConnections;i++){
         
         for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
             if(resources[i] != 0){
-                draw_sprite (spr_resourceIcons, i, x+16, y-10+(12*i))
+                draw_sprite (spr_resourceIcons, i, x+18, y-10+(12*j))
                 draw_set_halign(fa_left)
                 draw_set_colour(global.RESOURCE_COLOUR[i])
-                draw_text(x+22, y-10+(12*i), string_format(resources[i],2,1))
+                draw_text(x+24, y-10+(12*j), string_format(resources[i],2,1))
                 j++
             }
         }
