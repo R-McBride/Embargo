@@ -11,7 +11,7 @@
     <sprite>sprites\spr_units</sprite>
     <sprite>sprites\spr_actionButton</sprite>
     <sprite>sprites\spr_HUD</sprite>
-    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\spr_resourceIcons3</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
     <sprite>sprites\sprite8</sprite>
@@ -43,6 +43,11 @@
     <script>scripts\script19.gml</script>
     <script>scripts\script20.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_tiny</font>
+    <font>fonts\fnt_medium</font>
+    <font>fonts\fnt_huge</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Node</object>
     <object>objects\Generate</object>
