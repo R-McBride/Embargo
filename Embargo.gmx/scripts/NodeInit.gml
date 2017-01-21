@@ -2,6 +2,8 @@ connections[global.NUM_PLANETS] = 0
 numConnections = 0
 group = 0
 
+//curSelected = false
+
 type = irandom(11)
 
 population[0] = 0

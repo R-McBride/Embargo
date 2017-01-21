@@ -37,7 +37,7 @@
     <script>scripts\EndTurn.gml</script>
     <script>scripts\Setup.gml</script>
     <script>scripts\DrawHUD.gml</script>
-    <script>scripts\script16.gml</script>
+    <script>scripts\planetSelect.gml</script>
     <script>scripts\script17.gml</script>
     <script>scripts\script18.gml</script>
     <script>scripts\script19.gml</script>
