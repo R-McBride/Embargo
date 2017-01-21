@@ -90,6 +90,8 @@ for(i = 0; i < global.NUM_PLAYERS; i++)
 {
     //Starting Faction
     global.FACTION[i] = i+1
+    global.CAPITAL[i] = 10.0
+    global.POWER[i] = 10.0
 
     //Starting Diplomacy
     for(ii = 0; ii < global.NUM_PLAYERS; ii++)

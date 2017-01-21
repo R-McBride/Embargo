@@ -47,19 +47,5 @@ for (var i = 0;i < numConnections;i++){
     draw_set_colour(c_red)
     //draw_text(x+20,y+20, group)
     
-    if global.VIEW = VIEW_TYPE.RESOURCE
-    {
-        var j = 0
-        
-        for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
-            if(resources[i] != 0){
-                draw_sprite (spr_resourceIcons, i, x+18, y-10+(12*j))
-                draw_set_halign(fa_left)
-                draw_set_colour(global.RESOURCE_COLOUR[i])
-                draw_text(x+24, y-10+(12*j), string_format(resources[i],2,1))
-                j++
-            }
-        }
-    }
     
     //draw_circle(x,y,100,true)

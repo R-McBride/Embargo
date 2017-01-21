@@ -1,18 +1,18 @@
 randomize()
 
-room_width = global.MAP_SIZE+100
-room_height = global.MAP_SIZE+100
+room_width = (1.6*global.MAP_SIZE)+100
+room_height = (.9*global.MAP_SIZE)+100
 
 sector = instance_create(0,0,Sector)
 for (var i=0;i<global.NUM_PLANETS;i++){
-    ix = 50+random(global.MAP_SIZE)
-    iy = 50+random(global.MAP_SIZE)
+    ix = 50+random(1.6*global.MAP_SIZE)
+    iy = 50+random(.9*global.MAP_SIZE)
     
     if i>0
     {
         while(point_distance(ix,iy,instance_nearest(ix,iy,Node).x,instance_nearest(ix,iy,Node).y) < (global.MAP_SIZE/10)){
-        ix = 50+random(global.MAP_SIZE)
-        iy = 50+random(global.MAP_SIZE)
+        ix = 50+random(1.6*global.MAP_SIZE)
+        iy = 50+random(.9*global.MAP_SIZE)
         }
     }
        

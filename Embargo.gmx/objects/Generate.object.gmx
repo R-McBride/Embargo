@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>Globals()
 SectorGeneration()
+
+instance_create(x,y,obj_Camera)
 </string>
           </argument>
         </arguments>
@@ -64,6 +66,29 @@ else
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>DrawHUD()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -88,6 +113,25 @@ else
     draw_set_colour(c_white)
         for (var i = 0;i &lt; numConnections;i++){
         draw_line(x,y,connections[i].x,connections[i].y)
+        }
+    }
+}
+
+
+with(Node)
+{
+    if global.VIEW = VIEW_TYPE.RESOURCE or id = other.hover
+    {
+        var j = 0
+        
+        for (var i = 0; i &lt; global.NUM_RESOURCE_TYPES; i++){
+            if(resources[i] != 0){
+                for(var ii = 0; ii &lt; resources[i]; ii++){
+                    draw_sprite (spr_resourceIcons, i, x+18+(14*ii), y-10+(14*j))
+                }
+                draw_set_halign(fa_left)
+                j++
+            }
         }
     }
 }
