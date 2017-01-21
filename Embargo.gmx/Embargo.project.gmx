@@ -5,7 +5,19 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\sprite8</sprite>
+    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sprite10</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -22,9 +34,20 @@
     <script>scripts\script10.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\object13</object>
+    <object>objects\object8</object>
     <object>objects\Node</object>
     <object>objects\Generate</object>
     <object>objects\Sector</object>
+    <object>objects\object3</object>
+    <object>objects\object4</object>
+    <object>objects\object5</object>
+    <object>objects\object6</object>
+    <object>objects\object7</object>
+    <object>objects\object9</object>
+    <object>objects\object10</object>
+    <object>objects\object11</object>
+    <object>objects\object12</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
