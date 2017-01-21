@@ -47,12 +47,13 @@ for (var i = 0;i < numConnections;i++){
     if global.VIEW = VIEW_TYPE.RESOURCE
     {
         var j = 0
+        
         for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
             if(resources[i] != 0){
-                draw_sprite (spr_resourceIcons, i, x+16, y-10+(12*j))
+                draw_sprite (spr_resourceIcons, i, x+16, y-10+(12*i))
                 draw_set_halign(fa_left)
-                draw_set_colour(c_white)
-                draw_text(x+22, y-10+(12*j), string_format(resources[i],2,1))
+                draw_set_colour(global.RESOURCE_COLOUR[i])
+                draw_text(x+22, y-10+(12*i), string_format(resources[i],2,1))
                 j++
             }
         }

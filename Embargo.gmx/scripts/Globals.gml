@@ -2,13 +2,13 @@ global.MAP_SIZE = 800
 global.NUM_PLANETS = 50 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 3
 
-global.NUM_NODE_TYPES = 12
+global.NUM_NODE_TYPES = 5
 enum NODE_TYPES {
-    PLANET = 5, 
-    ASTEROID_BELT = 7,
-    OCEAN = 8,
-    NEBULA = 10,
-    BLACK_HOLE = 11    
+    PLANET = 0, 
+    ASTEROID_BELT = 1,
+    OCEAN = 2,
+    NEBULA = 3,
+    BLACK_HOLE = 4    
     }
 
 global.NUM_RESOURCE_TYPES = 5 
