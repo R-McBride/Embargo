@@ -44,9 +44,9 @@
     <script>scripts\script20.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_ActionButton</object>
     <object>objects\Node</object>
     <object>objects\Generate</object>
+    <object>objects\obj_ActionButton</object>
     <object>objects\Sector</object>
     <object>objects\Unit</object>
     <object>objects\Navy</object>

@@ -66,6 +66,7 @@ for (var i=0;i<global.NUM_PLANETS;i++){
 
 //make connections between all hub planets
 for (var i = 0; i < numGroups; i++){
+    hasMadeConnection = false
     for (var j = 0; j < numGroups; j++){
         if(i!=j){
             closesti = capPlanets[i]//set closest planet to the capPlanet
@@ -81,7 +82,19 @@ for (var i = 0; i < numGroups; i++){
             if (point_distance(closesti.x, closesti.y, closestj.x, closestj.y) < (global.MAP_SIZE/3)){
                 closesti.connections[closesti.numConnections] = closestj
                 closesti.numConnections++
+                hasMadeConnection = true
             }
         }
     }
+    
+    //trying to remove the outlier cases
+    /*
+    if (hasMadeConnection = false){
+        temp = instance_nearest(capPlanets[i].x,capPlanets[i].y,Node)
+        capPlanets[i].connections[capPlanets[i].numConnections] = temp
+        capPlanets[i].numConnections++
+        temp.connections[temp.numConnections] = capPlanets[i] 
+        temp.numConnections++
+    }
+    */
 }

@@ -1,5 +1,6 @@
 switch (argument0){
     case(NAVAL_TYPE.SCOUT):
+        
         break
     case(NAVAL_TYPE.FRIGATE):
         break
