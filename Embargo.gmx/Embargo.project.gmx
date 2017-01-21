@@ -6,11 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sprite1</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\spr_resourceIcons</sprite>
+    <sprite>sprites\spr_factionIcons</sprite>
+    <sprite>sprites\spr_units</sprite>
+    <sprite>sprites\spr_actionButton</sprite>
+    <sprite>sprites\spr_HUD</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
@@ -32,10 +32,10 @@
     <script>scripts\NavalInit.gml</script>
     <script>scripts\MilitaryInit.gml</script>
     <script>scripts\StationInit.gml</script>
-    <script>scripts\script11.gml</script>
-    <script>scripts\script12.gml</script>
-    <script>scripts\script13.gml</script>
-    <script>scripts\script14.gml</script>
+    <script>scripts\ActionButton.gml</script>
+    <script>scripts\MoveControl.gml</script>
+    <script>scripts\EndTurn.gml</script>
+    <script>scripts\Setup.gml</script>
     <script>scripts\script15.gml</script>
     <script>scripts\script16.gml</script>
     <script>scripts\script17.gml</script>
@@ -44,7 +44,7 @@
     <script>scripts\script20.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\object8</object>
+    <object>objects\obj_ActionButton</object>
     <object>objects\Node</object>
     <object>objects\Generate</object>
     <object>objects\Sector</object>

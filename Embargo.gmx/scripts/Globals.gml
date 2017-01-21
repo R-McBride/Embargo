@@ -18,7 +18,6 @@ enum RESOURCE_TYPES {
     CAPITAL = 2 , 
     INFLUENCE = 3 , 
     LORE = 4 
-<<<<<<< HEAD
 }
     
 enum AGENT_TYPE{
@@ -37,14 +36,10 @@ enum NAVAL_TYPE{
     CRUISER = 2 ,
     BATTLESHIP = 3
 }
-=======
-    }
-    
-    
+
 //Control Variables
 hover = noone
 
 //Turn Variables
 turn = 1
 currentPlayer = 1
->>>>>>> origin/master

@@ -113,6 +113,10 @@ if point_distance(ii.x,ii.y,mouse_x,mouse_y) &lt; 25
 {
     hover = ii
 }
+else
+{
+    hover = noone
+}
 </string>
           </argument>
         </arguments>
@@ -139,7 +143,10 @@ if point_distance(ii.x,ii.y,mouse_x,mouse_y) &lt; 25
 {
     with(hover)
     {
-    
+    draw_set_colour(c_white)
+        for (var i = 0;i &lt; numConnections;i++){
+        draw_line(x,y,connections[i].x,connections[i].y)
+        }
     }
 }
 </string>
