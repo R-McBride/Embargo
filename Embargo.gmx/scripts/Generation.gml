@@ -2,7 +2,18 @@ randomize()
 
 sector = instance_create(0,0,Sector)
 for (var i=0;i<global.NUM_PLANETS;i++){
-    sector.nodes[i] = instance_create(random(500), random(500), Node)
+    ix = random(500)
+    iy = random(500)
+    
+    if i>0
+    {
+        while(point_distance(ix,iy,instance_nearest(ix,iy,Node).x,instance_nearest(ix,iy,Node).y) < 50){
+        ix = random(500)
+        iy = random(500)
+        }
+    }
+       
+    sector.nodes[i] = instance_create(ix, iy, Node)
 }
 
 //set up hub planet variables to connect groups
