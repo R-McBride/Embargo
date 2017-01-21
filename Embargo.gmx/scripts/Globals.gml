@@ -19,3 +19,11 @@ enum RESOURCE_TYPES {
     INFLUENCE = 3 , 
     LORE = 4 
     }
+    
+    
+//Control Variables
+hover = noone
+
+//Turn Variables
+turn = 1
+currentPlayer = 1
