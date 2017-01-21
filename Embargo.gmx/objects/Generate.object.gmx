@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>Generation</script>
+            <script>SectorGeneration</script>
           </argument>
           <argument>
             <kind>0</kind>

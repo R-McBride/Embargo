@@ -9,7 +9,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Generation.gml</script>
+    <script>scripts\SectorGeneration.gml</script>
     <script>scripts\SectorConst.gml</script>
     <script>scripts\NodeConst.gml</script>
     <script>scripts\NodeDraw.gml</script>
