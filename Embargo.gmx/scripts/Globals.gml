@@ -18,4 +18,21 @@ enum RESOURCE_TYPES {
     CAPITAL = 2 , 
     INFLUENCE = 3 , 
     LORE = 4 
-    }
+}
+    
+enum AGENT_TYPE{
+    OPERATIVE = 0 ,
+    MERCHANT = 1 ,
+    GENERAL = 2 ,
+    ADMIRAL = 3 ,
+    ENVOY = 4 ,
+    SCIENTIST = 5,
+    WIZARD = 6
+}
+
+enum NAVAL_TYPE{
+    SCOUT = 0 ,
+    FRIGATE = 1 ,
+    CRUISER = 2 ,
+    BATTLESHIP = 3
+}
