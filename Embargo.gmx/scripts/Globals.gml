@@ -1,6 +1,6 @@
 global.MAP_SIZE = 800
 global.NUM_PLANETS = 40 //eventually we can make this a density variable based on map size
-global.NUM_PLAYERS = 2
+global.NUM_PLAYERS = 3
 
 global.NUM_NODE_TYPES = 4
 enum NODE_TYPES {
@@ -37,9 +37,40 @@ enum NAVAL_TYPE{
     BATTLESHIP = 3
 }
 
+enum FACTION_TYPE{
+    EMPIRE = 1 , 
+    FREECOL = 2 ,
+    PERFECTIONATE = 3 ,  
+    COMPANIONS = 4 ,      
+    COVEN = 5 , 
+    CRAFT = 6 ,
+    BUGMEN = 7 ,  
+    SPACEGHOSTS = 8
+}
+
+enum DIPLOMACY_TYPE{
+    ATWAR = 0 ,     //Players have fought and haven't resolved it
+    EMBARGO = 1 ,
+    NEUTRAL = 2 ,   //Players can trade
+    ALLIES = 3      //Players can trade and move through each other
+}
+
 //Control Variables
 hover = noone
 
 //Turn Variables
-turn = 1
-currentPlayer = 1
+global.TURN = 1
+global.PLAYER = 1
+
+//Player Variables
+for(i = 0; i < NUM_PLAYERS; i++)
+{
+    //Starting Faction
+    global.FACTION[i] = i+1
+
+    //Starting Diplomacy
+    for(ii = 0; i < NUM_PLAYERS; ii++)
+    {
+        global.DIPLOMACY[i,ii] = DIPLOMACY_TYPE.NEUTRAL
+    }
+}
