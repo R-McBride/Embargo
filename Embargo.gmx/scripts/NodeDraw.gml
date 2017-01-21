@@ -1,8 +1,15 @@
 for (var i = 0;i < numConnections;i++){
     draw_set_halign(fa_center)
     draw_set_valign(fa_center)
-    draw_set_colour(c_lime)
-    draw_arrow(x,y,connections[i].x,connections[i].y,10)
+    
+    if hover = false{
+    draw_set_colour(c_gray)
+    }
+    else{
+    draw_set_colour(c_white)
+    }
+    
+    draw_line(x,y,connections[i].x,connections[i].y)
     
     switch (type){
         case (NODE_TYPES.PLANET):
