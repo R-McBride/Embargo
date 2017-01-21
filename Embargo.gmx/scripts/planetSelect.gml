@@ -1,7 +1,7 @@
 temp = instance_nearest(mouse_x,mouse_y,Node)
 
 if(point_distance(mouse_x,mouse_y,temp.x,temp.y)<20){
-    global.selected = temp
+    global.selectedNode = temp
     //temp.curSelected = true
 }
 

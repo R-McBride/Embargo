@@ -1,1 +1,2 @@
-//gets passed the planet you're mmoving to by the step in fleet
+//gets passed the planet you're moving to by the step in fleet
+

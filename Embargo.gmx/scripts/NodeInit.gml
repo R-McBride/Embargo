@@ -1,8 +1,9 @@
-connections[global.NUM_PLANETS] = 0
+connections[global.NUM_PLANETS] = noone
 numConnections = 0
 group = 0
+fleetSlots[3] = noone
+numFleetsPresent = 0
 
-//curSelected = false
 
 type = irandom(11)
 

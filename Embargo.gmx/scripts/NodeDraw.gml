@@ -48,10 +48,16 @@ for (var i = 0;i < numConnections;i++){
     //draw_text(x+20,y+20, group)
     
     
-if(global.selected == self.id){
+if(global.selectedNode == self.id){
     draw_set_colour(c_lime)
     draw_circle(x,y,15,true)
     draw_circle(x,y,16,true)
+    
+}
+
+for(var i = 0; i < numFleetsPresent; i++){
+    draw_set_colour(c_teal)
+    draw_rectangle(x-15,y+(i*12),x-7,y+8+(i*12),false)
 }
     
     //draw_circle(x,y,100,true)
