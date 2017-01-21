@@ -97,4 +97,10 @@ for (var i = 0; i < numGroups; i++){
         temp.numConnections++
     }
     */
+    
 }
+
+testStation = instance_create (capPlanets[0].x, capPlanets[0].y, Station)
+
+testStation.position = capPlanets[0]
+
