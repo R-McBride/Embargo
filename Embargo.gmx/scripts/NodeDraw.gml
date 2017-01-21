@@ -6,20 +6,20 @@ for (var i = 0;i < numConnections;i++){
     draw_line(x,y,connections[i].x,connections[i].y)
     }
     
-    switch (type){
-        case (NODE_TYPES.PLANET):
+    if(type<NODE_TYPES.PLANET)
             draw_set_colour(c_green)
-            break
-        case (NODE_TYPES.ASTEROID_BELT):
+    else if(type<NODE_TYPES.ASTEROID_BELT)
             draw_set_colour(c_gray)
-            break
-        case (NODE_TYPES.OCEAN):
+    else if (type<NODE_TYPES.OCEAN)
             draw_set_colour(c_blue)
-            break
-        case (NODE_TYPES.NEBULA):
+    else if (type<NODE_TYPES.NEBULA)
             draw_set_colour(c_yellow)
-            break            
-    }
+    else if(type<NODE_TYPES.BLACK_HOLE){
+            draw_set_colour(c_purple)
+            sunColour = 5
+            }              
+            
+            
     draw_circle(x,y,10,true)
     
     switch(sunColour){
@@ -38,6 +38,11 @@ for (var i = 0;i < numConnections;i++){
         case (4):
             draw_set_colour(c_aqua)
             break
+        case (5):
+            draw_set_colour(c_purple)
+            break
+        default:
+            break
         }  
           
     draw_circle(x,y,3,false)
@@ -46,7 +51,7 @@ for (var i = 0;i < numConnections;i++){
     
     var j = 0
     for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
-        if(resources[i] == true){
+        if(resources[i] != 0){
             draw_sprite (spr_resourceIcons, i, x+10+(12*j), y-10)
             j++
         }
