@@ -1,4 +1,5 @@
-global.NUM_PLANETS = 20
+global.MAP_SIZE = 800
+global.NUM_PLANETS = 40 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 2
 
 global.NUM_NODE_TYPES = 4

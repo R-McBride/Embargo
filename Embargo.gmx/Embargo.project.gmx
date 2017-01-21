@@ -22,29 +22,38 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\SectorGeneration.gml</script>
-    <script>scripts\SectorConst.gml</script>
-    <script>scripts\NodeConst.gml</script>
+    <script>scripts\SectorInit.gml</script>
+    <script>scripts\NodeInit.gml</script>
     <script>scripts\NodeDraw.gml</script>
     <script>scripts\Globals.gml</script>
-    <script>scripts\script5.gml</script>
-    <script>scripts\script6.gml</script>
-    <script>scripts\script7.gml</script>
-    <script>scripts\script8.gml</script>
-    <script>scripts\script9.gml</script>
-    <script>scripts\script10.gml</script>
+    <script>scripts\UnitInit.gml</script>
+    <script>scripts\FleetInit.gml</script>
+    <script>scripts\AgentInit.gml</script>
+    <script>scripts\NavalInit.gml</script>
+    <script>scripts\MilitaryInit.gml</script>
+    <script>scripts\StationInit.gml</script>
+    <script>scripts\script11.gml</script>
+    <script>scripts\script12.gml</script>
+    <script>scripts\script13.gml</script>
+    <script>scripts\script14.gml</script>
+    <script>scripts\script15.gml</script>
+    <script>scripts\script16.gml</script>
+    <script>scripts\script17.gml</script>
+    <script>scripts\script18.gml</script>
+    <script>scripts\script19.gml</script>
+    <script>scripts\script20.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\object13</object>
     <object>objects\object8</object>
     <object>objects\Node</object>
     <object>objects\Generate</object>
     <object>objects\Sector</object>
-    <object>objects\object3</object>
-    <object>objects\object4</object>
-    <object>objects\object5</object>
-    <object>objects\object6</object>
-    <object>objects\object7</object>
-    <object>objects\object9</object>
+    <object>objects\Unit</object>
+    <object>objects\Navy</object>
+    <object>objects\Agent</object>
+    <object>objects\Military</object>
+    <object>objects\Fleet</object>
+    <object>objects\Object1</object>
     <object>objects\object10</object>
     <object>objects\object11</object>
     <object>objects\object12</object>

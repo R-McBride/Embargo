@@ -1,15 +1,18 @@
 randomize()
 
+room_width = global.MAP_SIZE+100
+room_height = global.MAP_SIZE+100
+
 sector = instance_create(0,0,Sector)
 for (var i=0;i<global.NUM_PLANETS;i++){
-    ix = random(500)
-    iy = random(500)
+    ix = 50+random(global.MAP_SIZE)
+    iy = 50+random(global.MAP_SIZE)
     
     if i>0
     {
-        while(point_distance(ix,iy,instance_nearest(ix,iy,Node).x,instance_nearest(ix,iy,Node).y) < 50){
-        ix = random(500)
-        iy = random(500)
+        while(point_distance(ix,iy,instance_nearest(ix,iy,Node).x,instance_nearest(ix,iy,Node).y) < (global.MAP_SIZE/10)){
+        ix = 50+random(global.MAP_SIZE)
+        iy = 50+random(global.MAP_SIZE)
         }
     }
        
@@ -33,7 +36,7 @@ for (var i=0;i<global.NUM_PLANETS;i++){
     for (var iii=0;iii<global.NUM_PLANETS;iii++){
         if(i != iii){
         //is the node we're comparing to close enough to make a connection?
-            if (point_distance(sector.nodes[i].x,sector.nodes[i].y, sector.nodes[iii].x, sector.nodes[iii].y)<100){
+            if (point_distance(sector.nodes[i].x,sector.nodes[i].y, sector.nodes[iii].x, sector.nodes[iii].y)<(global.MAP_SIZE/5)){
             //set that node to be a new connection
                 sector.nodes[i].connections[ii] = sector.nodes[iii]
                 //increase the position in connections array
@@ -75,7 +78,7 @@ for (var i = 0; i < numGroups; i++){
                     closestj = sector.nodes[k]
                 }
             }
-            if (point_distance(closesti.x, closesti.y, closestj.x, closestj.y) < 250){
+            if (point_distance(closesti.x, closesti.y, closestj.x, closestj.y) < (global.MAP_SIZE/3)){
                 closesti.connections[closesti.numConnections] = closestj
                 closesti.numConnections++
             }
