@@ -1,5 +1,5 @@
 global.MAP_SIZE = 800
-global.NUM_PLANETS = 40 //eventually we can make this a density variable based on map size
+global.NUM_PLANETS = 50 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 3
 
 global.NUM_NODE_TYPES = 4
@@ -55,21 +55,43 @@ enum DIPLOMACY_TYPE{
     ALLIES = 3      //Players can trade and move through each other
 }
 
+enum VIEW_TYPE{
+    NONE = 0 ,
+    RESOURCE = 1 ,
+    INFLUENCE = 2   
+}
+
+global.FACTION_COLOUR[1] = make_colour_rgb(99,31,168)
+global.FACTION_COLOUR[2] = make_colour_rgb(45,65,165)
+global.FACTION_COLOUR[3] = make_colour_rgb(233,13,32)
+global.FACTION_COLOUR[4] = make_colour_rgb(66,168,31)
+global.FACTION_COLOUR[5] = make_colour_rgb(11,130,98)
+global.FACTION_COLOUR[6] = make_colour_rgb(187,196,202)
+global.FACTION_COLOUR[7] = make_colour_rgb(163,113,24)
+global.FACTION_COLOUR[8] = make_colour_rgb(218,62,81)
+
+global.RESOURCE_COLOUR[0] = make_colour_rgb(147,233,71)
+global.RESOURCE_COLOUR[1] = make_colour_rgb(139,37,46)
+global.RESOURCE_COLOUR[2] = make_colour_rgb(255,245,88)
+global.RESOURCE_COLOUR[3] = make_colour_rgb(83,171,233)
+global.RESOURCE_COLOUR[4] = make_colour_rgb(182,54,230)
+
 //Control Variables
 hover = noone
+global.VIEW = VIEW_TYPE.RESOURCE
 
 //Turn Variables
 global.TURN = 1
 global.PLAYER = 1
 
 //Player Variables
-for(i = 0; i < NUM_PLAYERS; i++)
+for(i = 0; i < global.NUM_PLAYERS; i++)
 {
     //Starting Faction
     global.FACTION[i] = i+1
 
     //Starting Diplomacy
-    for(ii = 0; i < NUM_PLAYERS; ii++)
+    for(ii = 0; ii < global.NUM_PLAYERS; ii++)
     {
         global.DIPLOMACY[i,ii] = DIPLOMACY_TYPE.NEUTRAL
     }

@@ -42,13 +42,20 @@ for (var i = 0;i < numConnections;i++){
           
     draw_circle(x,y,3,false)
     draw_set_colour(c_red)
-    draw_text(x+20,y+20, group)
+    //draw_text(x+20,y+20, group)
     
-    var j = 0
-    for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
-        if(resources[i] == true){
-            draw_sprite (spr_resourceIcons, i, x+10+(12*j), y-10)
-            j++
+    if global.VIEW = VIEW_TYPE.RESOURCE
+    {
+        var j = 0
+        for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
+            if(resources[i] != 0){
+                draw_sprite (spr_resourceIcons, i, x+16, y-10+(12*j))
+                draw_set_halign(fa_left)
+                draw_set_colour(c_white)
+                draw_text(x+22, y-10+(12*j), string_format(resources[i],2,1))
+                j++
+            }
         }
     }
+    
     //draw_circle(x,y,100,true)
