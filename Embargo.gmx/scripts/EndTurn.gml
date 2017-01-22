@@ -82,9 +82,12 @@ with (Fleet){
 with (Node){
     if (type = NODE_TYPES.PLANET){
         for (var i = 1; i <= global.NUM_PLAYERS; i++){
-            global.PSCORE[i] += population[i]
+            if (population[i] > 0){
+                global.PSCORE[i] += population[i]
+            }
+            
             if (population[i] > currentPop/2){
-                global.PSCORE[i] += 5 //THERE'S A SPY ROUND HERE
+                global.PSCORE[i] += 5 
             }
         }
     }

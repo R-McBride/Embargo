@@ -145,7 +145,7 @@ planet = argument2
 
 b = min(gain, planet.currentPop-planet.population[gainer])/planet.resistance
 if (b<0){
-    b = 0.01
+    b = 0
 }
 planet.population[gainer] += b
         
