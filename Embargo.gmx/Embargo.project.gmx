@@ -48,6 +48,8 @@
     <script>scripts\script18.gml</script>
     <script>scripts\script19.gml</script>
     <script>scripts\script20.gml</script>
+    <script>scripts\Building.gml</script>
+    <script>scripts\Upgrade.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_tiny</font>
