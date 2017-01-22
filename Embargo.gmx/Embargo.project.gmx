@@ -49,6 +49,8 @@
     <script>scripts\script19.gml</script>
     <script>scripts\script20.gml</script>
     <script>scripts\updateVision.gml</script>
+    <script>scripts\BuildInit.gml</script>
+    <script>scripts\UpgradeInit.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_tiny</font>
