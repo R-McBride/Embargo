@@ -9,7 +9,7 @@ choose('','','','','','','','','','-')+
 choose('gon','tal','ala','ian','ah')+' '+
 choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+
 choose('','','','','','','','','','','','','a','a','b','c')
-
+offset = random(2*pi)
 type = 1+irandom(99)
 
 planetSize = irandom(3)
