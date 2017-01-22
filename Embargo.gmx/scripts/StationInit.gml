@@ -1,5 +1,5 @@
 position = noone
-owner = 1
+player = 1
 
 //range from - to +
 influence = 0

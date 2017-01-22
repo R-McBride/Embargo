@@ -55,6 +55,7 @@ if(global.selectedNode == self.id){
     
 }
 
+/*
 for(var i = 0; i < numFleetsPresent; i++){
     draw_set_colour(c_teal)
     draw_rectangle(x-15,y+(i*12),x-7,y+8+(i*12),false)

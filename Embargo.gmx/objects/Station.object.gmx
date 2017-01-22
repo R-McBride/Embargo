@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, position.x-10, position.y-10, 1, 1, 0, global.FACTION_COLOUR[global.FACTION[owner]], 1)
+            <string>draw_sprite_ext(sprite_index, image_index, position.x-15, position.y-15, 1, 1, 0, global.FACTION_COLOUR[global.FACTION[player]], 1)
 </string>
           </argument>
         </arguments>

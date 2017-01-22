@@ -215,6 +215,10 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; globa
             draw_line(x,y,connections[i].x,connections[i].y)
             draw_set_colour(c_white)
         }
+        
+        draw_sprite(spr_unitSlot,0,x-20,y)
+        draw_sprite(spr_unitSlot,0,x-15,y+15)
+        draw_sprite(spr_unitSlot,0,x,y+20)
     }
 }
 
