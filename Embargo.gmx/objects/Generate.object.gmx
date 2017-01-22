@@ -74,6 +74,22 @@ if keyboard_check_pressed(vk_space)
     EndTurn()
 }
 
+if mouse_check_button_pressed(mb_left){
+    if point_in_rectangle(mouse_x,mouse_y,view_xview+view_wview-220,view_yview,view_xview+view_wview-120,view_yview+20){
+        i = instance_create(790,30,obj_button)
+        i.type = VIEW_TYPE.NONE
+        i.name = 'No Filter'
+        
+        i = instance_create(790,50,obj_button)
+        i.type = VIEW_TYPE.RESOURCE
+        i.name = 'Resource'
+        
+        i = instance_create(790,70,obj_button)
+        i.type = VIEW_TYPE.INFLUENCE
+        i.name = 'Influence'
+    }
+}
+
 
 </string>
           </argument>
@@ -230,7 +246,7 @@ with(Node)
     draw_set_halign(fa_middle)
     draw_set_font(fnt_tiny)
 
-    if global.VIEW = VIEW_TYPE.RESOURCE or id = other.hover
+    if global.VIEW = VIEW_TYPE.RESOURCE
     {
         var j = 0
         
@@ -251,6 +267,24 @@ with(Node)
                 draw_set_halign(fa_left)
                 j++
             }
+        }
+    }
+    
+    if global.VIEW = VIEW_TYPE.INFLUENCE or (id = other.hover and global.VIEW != VIEW_TYPE.RESOURCE)
+    {
+        draw_set_halign(fa_right)
+        var j = 0
+        
+        for (var i = 0; i &lt;= global.NUM_PLAYERS; i++){
+            if(population[i] != 0){
+                if i != 0 {
+                    draw_sprite(spr_factionIcons, i, x+18, y-10+(14*j))
+                }
+                draw_set_colour(global.FACTION_COLOUR[i])
+                draw_text(x+50, y-10+(14*j),string_format(population[i],2,1))
+            }
+               
+                j++
         }
     }
 }

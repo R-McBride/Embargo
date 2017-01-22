@@ -74,6 +74,7 @@ enum PLANET_SIZE{
     LARGE = 5
 }
 
+global.FACTION_COLOUR[0] = c_white
 global.FACTION_COLOUR[1] = make_colour_rgb(99,31,168)
 global.FACTION_COLOUR[2] = make_colour_rgb(45,65,165)
 global.FACTION_COLOUR[3] = make_colour_rgb(233,13,32)
