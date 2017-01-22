@@ -7,9 +7,9 @@ numFleetsPresent = 0
 stationSlot = noone
 stationPresent = false
 difficult = false
-name = choose('Gar','Farr','Hel','Pal','Tek','Burr', 'Col', 'Cas', 'Can', 'Tar', 'Ly', 'Vir', 'An', 'Vir', 'Aquar', 'Corv', 'Drac', 'Cor', 'Cyg', 'Per', 'Ur', 'Gem', 'Hid', 'Can')+
+name = choose('Gar','Farr','Hel','Pal','Tek','Burr', 'Col', 'Cas', 'Can', 'Tar', 'Ly', 'Vir', 'An', 'Vir', 'Aquar', 'Corv', 'Drac', 'Cor', 'Cyg', 'Per', 'Ur', 'Gem', 'Hid', 'Can', 'Xax')+
 choose('','','','','','','','','','-')+
-choose('gon','tal','ala','ian','ah', 'is', 'us', 'go', 'co', 'nus', 'sus', 'iga', 'tes', 'ter', 'ion', 'dra', 'ila', 'pens', 'nix', '', 'tus' , 'ma', 'umbia', 'ini' )+' '+
+choose('gon','tal','ala','ian','ah', 'is', 'us', 'go', 'co', 'nus', 'sus', 'iga', 'tes', 'ter', 'ion', 'dra', 'ila', 'pens', 'nix', '', 'tus' , 'ma', 'umbia', 'ini', 'xon', 'z', 'x', 'xux' )+' '+
 choose('','','','','','','','','','','','',' Major ',' Minor ') +
 choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+' '+
 choose('','','','','','','','','','','','','a','a','b','c','d')
