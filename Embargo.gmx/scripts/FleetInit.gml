@@ -9,9 +9,9 @@ for(var i = 1; i < position.maxFleets; i++){
     }
 }
 
-position.numFleetsPresent++
+
 ships = ds_list_create()
 
 canMove = true
 
-player = global.PLAYER
+player = 0

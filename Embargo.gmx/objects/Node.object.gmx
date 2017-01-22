@@ -68,8 +68,15 @@
           <argument>
             <kind>1</kind>
             <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == self.id){
-    if(numFleetsPresent &lt; 3){
-        i = instance_create(x,y,Unit)
+    anyOwned = false
+    
+    for(i = 1; i &lt; maxFleets; i++){
+        if(fleetSlots[i].occupier != noone &amp;&amp; fleetSlots[i].occupier.player == global.PLAYER){
+            anyOwned = true 
+        }
+    }
+    if(numFleetsPresent &lt; 3 || anyOwned = true){
+        newUnit = instance_create(x,y,Unit)
     }
 }
 </string>
