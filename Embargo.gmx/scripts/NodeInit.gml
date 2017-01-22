@@ -13,7 +13,12 @@ choose('','','','','','','','','','','','','a','a','b','c')
 offset = random(2*pi)
 type = 1+irandom(99)
 
+if(global.FOG_OF_WAR){
 isVisible = false
+}
+else{
+isVisible = true
+}
 
 planetSize = irandom(3)
 currentPop = 0

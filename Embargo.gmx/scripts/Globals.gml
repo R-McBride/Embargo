@@ -1,6 +1,7 @@
 global.MAP_SIZE = 1000
 global.NUM_PLANETS = 80 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 8
+global.FOG_OF_WAR = true
 
 global.selectedNode = noone
 global.selectedFleet = noone
