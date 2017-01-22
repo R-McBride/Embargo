@@ -75,10 +75,9 @@ with (Fleet){
         temp.movesLeft = temp.unitSpeed
     }
     canMove = true
-<<<<<<< HEAD
 }
-=======
-}
+
+
 #define UpdateScore
 with (Node){
     if (type = NODE_TYPES.PLANET){
