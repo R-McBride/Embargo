@@ -1,6 +1,6 @@
     draw_set_halign(fa_center)
     draw_set_valign(fa_center)
-if(isVisible){    
+if(isVisible != false){    
     switch (type){
         case (NODE_TYPES.PLANET):
             draw_set_colour(c_green)
@@ -23,15 +23,13 @@ if(isVisible){
     
     draw_set_colour(sunColour)
     draw_circle(x,y,3,false)
-    
-    if(global.selectedNode == self.id){
-        draw_set_colour(c_lime)
-        draw_circle(x,y,15,true)
-        draw_circle(x,y,15.5,true)
-        draw_circle(x,y,16,true)
-        
-    }
 }
+
+if(isVisible = 2){
+draw_set_colour(c_yellow)
+draw_text(x,y-30,'?')
+}
+
 /*
 for(var i = 0; i < numFleetsPresent; i++){
     draw_set_colour(c_teal)

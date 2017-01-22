@@ -16,6 +16,8 @@ with(obj_sectorScreen){
     instance_destroy()
 }
 
+updateVision()
+
 #define StartTurn
 //Player Specifics
 for(i = 1; i <= global.NUM_PLAYERS; i++)
@@ -54,11 +56,13 @@ global.IPOWER_POP[p] = 0
 with(Node){
     if currentPop != 0{
     if population[p] > 0{
+    if isVisible != 0{
     global.ICAPITAL_POP[p] += population[p]*0.1
     global.IPOWER_POP[p] += population[p]*0.1
     
     global.ICAPITAL_NODE[p] += (population[p]/currentPop)*resources[2]
     global.IPOWER_NODE[p] += (population[p]/currentPop)*resources[3]
+    }
     }
     }
 }

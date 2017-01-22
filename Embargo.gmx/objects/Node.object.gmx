@@ -11,41 +11,22 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>NodeInit</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>1</kind>
+            <string>NodeInit()
+</string>
           </argument>
         </arguments>
       </action>
@@ -67,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == self.id){
+            <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == id){
     anyOwned = false
     
     for(i = 1; i &lt; maxFleets; i++){
@@ -80,16 +61,12 @@
     }
 }
 
-if(!isVisible){
-    for(i = 1; i &lt; global.NUM_PLAYERS; i++){
-        if(population[i] != 0){
-            isVisible = true
-        }
-    }
-}
-else if (type != NODE_TYPES.PLANET){
+
+if (type != NODE_TYPES.PLANET){
+    if isVisible != false or (type = NODE_TYPES.NEBULA) or (type = NODE_TYPES.OCEAN){
     if (irandom(2) = 0){
         part_emitter_burst(ps,emitter1,particle1,1);
+    }
     }
 }
 </string>
@@ -145,8 +122,8 @@ if (global.selectedNode == self.id){
           <argument>
             <kind>1</kind>
             <string>//Draw Connections
-if(isVisible){
-    draw_set_colour(c_gray)
+if(isVisible = true){
+    draw_set_colour(c_dkgray)
     
     for (var i = 0;i &lt; numConnections;i++){
         draw_line(x,y,connections[i].x,connections[i].y)
@@ -160,41 +137,22 @@ if(isVisible){
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>NodeDraw</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>1</kind>
+            <string>NodeDraw()
+</string>
           </argument>
         </arguments>
       </action>
