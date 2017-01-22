@@ -84,14 +84,16 @@ with (Node){
         for (var i = 1; i <= global.NUM_PLAYERS; i++){
             global.PSCORE[i] += population[i]
             if (population[i] > currentPop/2){
-                global.PSCORE[i] += 5
+                global.PSCORE[i] += 5 //THERE'S A SPY ROUND HERE
             }
         }
     }
 }
 
 with (Station){
-    global.PSCORE[player] += position.resources[2]*2
-    global.PSCORE[player] += position.resources[3]*5
-    global.PSCORE[player] += position.resources[4]*10
+    global.PSCORE[player] += position.resources[2]*1
+    global.PSCORE[player] += position.resources[3]*2
+    global.PSCORE[player] += position.resources[4]*5
 }
+
+

@@ -72,3 +72,5 @@ case VIEW_TYPE.INFLUENCE: draw_text(hM-170,vX+10,'Influence') break
 case VIEW_TYPE.GROWTH: draw_text(hM-170,vX+10,'Growth') break
 }
 
+//THIS IS JUST TO TEST SCORE
+draw_text (hM-50,vX+500,string_format(global.PSCORE[global.PLAYER],3,1))
