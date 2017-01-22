@@ -18,7 +18,7 @@ tempNode = instance_nearest(x,y,Node)
         for(i = 1; i < tempNode.maxFleets; i++){
             if(tempNode.fleetSlots[i].occupier != noone && tempNode.fleetSlots[i].occupier.player == player && created == false){
                 ds_list_add(tempNode.fleetSlots[i].occupier.ships,id)
-                show_message('huuurg')
+                //show_message('huuurg')
                 created = true
             }
             else if(created == false){

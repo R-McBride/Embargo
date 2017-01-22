@@ -13,6 +13,8 @@ choose('','','','','','','','','','','','','a','a','b','c')
 offset = random(2*pi)
 type = 1+irandom(99)
 
+isVisible = true
+
 planetSize = irandom(3)
 currentPop = 0
 partialPop = 0
@@ -172,5 +174,4 @@ part_emitter_region(ps,emitter1,x,x,y,y,ps_shape_ellipse,0);
 break
 
 }
-
 

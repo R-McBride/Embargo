@@ -115,6 +115,8 @@ for(ii = 0; i <= global.NUM_PLAYERS; ii++)
     testStation.position = sector.nodes[ii]
     testStation.player = i
     
+    sector.nodes[ii].isVisible = true
+    
     i++
     }
 }

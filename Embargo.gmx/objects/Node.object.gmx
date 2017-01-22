@@ -80,10 +80,17 @@
     }
 }
 
-if type != NODE_TYPES.PLANET{
-if irandom(2) = 0{
-    part_emitter_burst(ps,emitter1,particle1,1);
+if(!isVisible){
+    for(i = 1; i &lt; global.NUM_PLAYERS; i++){
+        if(population[i] != 0){
+            isVisible = true
+        }
+    }
 }
+else if (type != NODE_TYPES.PLANET){
+    if (irandom(2) = 0){
+        part_emitter_burst(ps,emitter1,particle1,1);
+    }
 }
 </string>
           </argument>
@@ -138,12 +145,13 @@ if (global.selectedNode == self.id){
           <argument>
             <kind>1</kind>
             <string>//Draw Connections
-draw_set_colour(c_gray)
-
-for (var i = 0;i &lt; numConnections;i++){
-    draw_line(x,y,connections[i].x,connections[i].y)
-    }
+if(isVisible){
+    draw_set_colour(c_gray)
     
+    for (var i = 0;i &lt; numConnections;i++){
+        draw_line(x,y,connections[i].x,connections[i].y)
+    }
+}
 </string>
           </argument>
         </arguments>
