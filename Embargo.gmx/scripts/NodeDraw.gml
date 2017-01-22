@@ -1,10 +1,5 @@
     draw_set_halign(fa_center)
     draw_set_valign(fa_center)
-    draw_set_colour(c_gray)
-    
-for (var i = 0;i < numConnections;i++){
-    draw_line(x,y,connections[i].x,connections[i].y)
-    }
     
     switch (type){
         case (NODE_TYPES.PLANET):
@@ -26,28 +21,8 @@ for (var i = 0;i < numConnections;i++){
     }
     draw_circle(x,y,10,true)
     
-    switch(sunColour){
-        case (0):
-            draw_set_colour(c_orange)
-            break
-        case (1):
-            draw_set_colour(c_yellow)
-            break
-        case (2):
-            draw_set_colour(c_white)
-            break
-        case (3):
-            draw_set_colour(c_red)
-            break
-        case (4):
-            draw_set_colour(c_aqua)
-            break
-        }  
-          
+    draw_set_colour(sunColour)
     draw_circle(x,y,3,false)
-    draw_set_colour(c_red)
-    //draw_text(x+20,y+20, group)
-    
     
 if(global.selectedNode == self.id){
     draw_set_colour(c_lime)

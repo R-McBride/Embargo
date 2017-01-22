@@ -1,3 +1,4 @@
+#define NodeInit
 connections[global.NUM_PLANETS] = noone
 numConnections = 0
 group = 0
@@ -20,7 +21,7 @@ population[global.NUM_PLAYERS] = 0
 influence[global.NUM_PLAYERS] = 0
 resistance = 0
 
-sunColour = floor(random(4.5))
+sunColour = choose(c_red,c_yellow,c_teal,c_white,c_orange)
 
 for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
     if (random(global.RESOURCE_RARITY) > global.RESOURCE_RARITY - 1){
@@ -44,23 +45,27 @@ for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
             resources[1] += 2
             resources[2] += 1
             type = NODE_TYPES.ASTEROID_BELT
+            nodeParticles(type)
             }
     else if(type<85){
             resources[0] += 3
             type = NODE_TYPES.OCEAN
+            nodeParticles(type)
             }
     else if(type<95){
             resources[0] = 0
             resources[1] = 0
             resources[4] += 2
             type = NODE_TYPES.NEBULA
+            nodeParticles(type)
             }  
     else{
             resources[0] = 0
             resources[3] += 1
             resources[4] += 1
-            sunColour = 5
+            sunColour = c_black
             type = NODE_TYPES.BLACK_HOLE
+            nodeParticles(type)
             }      
 
 //Planet Size
@@ -106,3 +111,66 @@ fleetSlots[2] = i
 i = instance_create(x,y+20,obj_FleetSlot)
 i.node = id
 fleetSlots[3] = i
+
+#define nodeParticles
+ps = part_system_create()
+
+particle1 = part_type_create();
+emitter1 = part_emitter_create(ps);
+
+switch(argument0){
+case NODE_TYPES.OCEAN:
+part_type_shape(particle1,pt_shape_sphere);
+part_type_size(particle1,0.20,1.00,0,0);
+part_type_color1(particle1,make_color_rgb(0,128,255));
+part_type_alpha3(particle1,0,1,0);
+part_type_speed(particle1,0,0.2,0,0);
+part_type_direction(particle1,0,359,0,1);
+part_type_orientation(particle1,0,0,0,0,1);
+part_type_blend(particle1,0);
+part_type_life(particle1,100,300);
+part_emitter_region(ps,emitter1,x-25,x+25,y-25,y+25,ps_shape_ellipse,0);
+break
+
+case NODE_TYPES.ASTEROID_BELT:
+part_type_shape(particle1,pt_shape_disk);
+part_type_size(particle1,.03,.06,0,0);
+part_type_color1(particle1,make_color_rgb(128,128,64));
+part_type_alpha3(particle1,0,1,0);
+part_type_speed(particle1,0,0.3,0,0);
+part_type_direction(particle1,0,359,0,10);
+part_type_orientation(particle1,0,359,2,2,1);
+part_type_blend(particle1,0);
+part_type_life(particle1,40,80);
+part_emitter_region(ps,emitter1,x-25,x+25,y-25,y+25,ps_shape_ellipse,0);
+break
+
+case NODE_TYPES.NEBULA:
+part_type_shape(particle1,pt_shape_smoke);
+part_type_size(particle1,0.20,1.50,0,0);
+part_type_color3(particle1,make_color_rgb(255,255,0),make_color_rgb(255,128,0),make_color_rgb(255,0,0));
+part_type_alpha3(particle1,0,.2,0);
+part_type_speed(particle1,0,0.3,0,0);
+part_type_direction(particle1,0,359,1,5);
+part_type_orientation(particle1,0,0,0,5,1);
+part_type_blend(particle1,1);
+part_type_life(particle1,60,200);
+part_emitter_region(ps,emitter1,x-25,x+25,y-25,y+25,ps_shape_ellipse,0);
+break
+
+case NODE_TYPES.BLACK_HOLE:
+part_type_shape(particle1,pt_shape_disk);
+part_type_size(particle1,.03,.05,0,0);
+part_type_color3(particle1,c_black,c_white,c_white);
+part_type_alpha3(particle1,0,0,1);
+part_type_speed(particle1,1,2,0,0);
+part_type_direction(particle1,0,359,4,1);
+part_type_orientation(particle1,0,0,0,0,0);
+part_type_blend(particle1,0);
+part_type_life(particle1,80,80);
+part_emitter_region(ps,emitter1,x,x,y,y,ps_shape_ellipse,0);
+break
+
+}
+
+

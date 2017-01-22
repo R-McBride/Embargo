@@ -28,6 +28,7 @@
     <script>scripts\SectorGeneration.gml</script>
     <script>scripts\SectorInit.gml</script>
     <script>scripts\NodeInit.gml</script>
+    <script>scripts\scr_particle.gml</script>
     <script>scripts\NodeDraw.gml</script>
     <script>scripts\Globals.gml</script>
     <script>scripts\UnitInit.gml</script>

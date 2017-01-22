@@ -72,6 +72,12 @@
         i = instance_create(x,y,Unit)
     }
 }
+
+if type != NODE_TYPES.PLANET{
+if irandom(2) = 0{
+    part_emitter_burst(ps,emitter1,particle1,1);
+}
+}
 </string>
           </argument>
         </arguments>
@@ -102,6 +108,35 @@ if (global.selectedNode == self.id){
     }
 }
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="72">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Draw Connections
+draw_set_colour(c_gray)
+
+for (var i = 0;i &lt; numConnections;i++){
+    draw_line(x,y,connections[i].x,connections[i].y)
+    }
+    
 </string>
           </argument>
         </arguments>
