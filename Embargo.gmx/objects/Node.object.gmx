@@ -70,11 +70,13 @@
             <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == self.id){
     anyOwned = false
     
+    //check this planet to see if it has any fleets that are the same faction as the new ship
     for(i = 1; i &lt; maxFleets; i++){
         if(fleetSlots[i].occupier != noone &amp;&amp; fleetSlots[i].occupier.player == global.PLAYER){
             anyOwned = true 
         }
     }
+    //if the spots to build aren't full or there's a fleet to join, make a new ship
     if(numFleetsPresent &lt; 3 || anyOwned = true){
         newUnit = instance_create(x,y,Unit)
     }
