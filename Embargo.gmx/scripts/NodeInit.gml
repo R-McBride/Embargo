@@ -5,7 +5,7 @@ group = 0
 fleetSlots[3] = noone
 numFleetsPresent = 0
 difficult = false
-name = choose('Gar','Farr','Hel','Pal','Tek')+
+name = choose('Gar','Farr','Hel','Pal','Tek', 'Bur')+
 choose('','','','','','','','','','-')+
 choose('gon','tal','ala','ian','ah')+' '+
 choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+
@@ -78,14 +78,20 @@ if type = NODE_TYPES.PLANET{
         planetSize = PLANET_SIZE.SMALL
         resources[0] -= floor(resources[0]*.4)
         resources[1] -= floor(resources[1]*.4)
+        buildings[1] = 0
+        maxBuilds = 2
     }
     else if(planetSize == 1 || planetSize == 2){
         planetSize = PLANET_SIZE.MEDIUM
+        buildings[2] = 0
+        maxBuilds = 3
     }
     else if(planetSize == 3){
         planetSize = PLANET_SIZE.LARGE
         resources[0] += floor(resources[0]*.4)
         resources[1] += floor(resources[1]*.4)
+        buildings[4] = 0
+        maxBuilds = 5
     }
 }
 
