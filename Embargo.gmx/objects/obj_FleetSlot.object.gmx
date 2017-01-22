@@ -50,7 +50,7 @@ occupier = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if node = Generate.hover or node = global.selectedNode{
+            <string>if node.isVisible != false and (node = Generate.hover or node = global.selectedNode){
     draw_sprite(spr_unitSlot,0,x,y)
 }
 </string>

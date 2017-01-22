@@ -244,7 +244,9 @@ if hover != noone
                     }
                 }
             }
-            draw_line(x,y,connections[i].x,connections[i].y)
+            if connections[i].isVisible = true{
+                draw_line(x,y,connections[i].x,connections[i].y)
+            }
             draw_set_colour(c_white)
         }
         }
