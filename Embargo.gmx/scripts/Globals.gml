@@ -7,6 +7,9 @@ global.selectedNode = noone
 global.selectedFleet = noone
 global.selectedUnit = noone
 
+//going to hold the variables for player actions
+global.CAN_BUY = false
+
 //global.MAX_FLEETS = 3
 
 global.NUM_NODE_TYPES = 5

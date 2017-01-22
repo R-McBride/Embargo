@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == id){
+            <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == id &amp;&amp; global.CAN_BUY){
     anyOwned = false
     
     //check this planet to see if it has any fleets that are the same faction as the new ship

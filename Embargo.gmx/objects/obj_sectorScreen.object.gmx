@@ -128,6 +128,17 @@ switch(global.selectedNode.type){
     case NODE_TYPES.BLACK_HOLE: draw_text(x,y-135,'Black Hole') break
 }
 
+draw_set_font(fnt_medium)
+
+
+//placeholder for actions in hud
+if(global.CAN_BUY == true){
+    draw_text(x, y-105, 'You Can Buy Things')
+}
+else{
+    draw_text(x, y-105, 'You Cannot Buy Things')
+}
+
 </string>
           </argument>
         </arguments>

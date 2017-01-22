@@ -107,6 +107,16 @@ if mouse_check_button_pressed(mb_left){
 }
 }
 
+//check what you can do!
+if(global.selectedNode != noone){
+    if(global.selectedNode.stationPresent == true &amp;&amp; global.selectedNode.stationSlot.player == global.PLAYER){
+        global.CAN_BUY = true
+    }
+    else{
+        global.CAN_BUY = false
+    }
+}
+
 </string>
           </argument>
         </arguments>

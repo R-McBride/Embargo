@@ -1,5 +1,7 @@
-position = noone
-player = 1
+position = instance_nearest(x,y,Node)
+position.stationSlot = id
+position.stationPresent = true
+player = global.PLAYER
 
 //range from - to +
 influence = 0

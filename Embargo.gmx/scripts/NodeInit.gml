@@ -4,6 +4,8 @@ numConnections = 0
 group = 0
 fleetSlots[3] = noone
 numFleetsPresent = 0
+stationSlot = noone
+stationPresent = false
 difficult = false
 name = choose('Gar','Farr','Hel','Pal','Tek', 'Bur')+
 choose('','','','','','','','','','-')+
