@@ -238,6 +238,9 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; globa
             if(global.selectedFleet != noone){
                 if(connections[i] == global.selectedFleet.position){
                     draw_set_colour(c_lime)
+                    if (global.selectedFleet.canMove = false){
+                        draw_set_colour(c_red)
+                    }
                 }
             }
             draw_line(x,y,connections[i].x,connections[i].y)
