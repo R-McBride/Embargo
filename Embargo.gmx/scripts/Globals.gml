@@ -1,5 +1,5 @@
-global.MAP_SIZE = 800
-global.NUM_PLANETS = 60 //eventually we can make this a density variable based on map size
+global.MAP_SIZE = 1000
+global.NUM_PLANETS = 80 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 8
 
 global.selectedNode = noone

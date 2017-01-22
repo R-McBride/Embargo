@@ -67,7 +67,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button_pressed(mb_left)){
+            <string>if global.mouseMenu = false{
+if (mouse_check_button_pressed(mb_left)){
     if (point_distance(x,y,mouse_x,mouse_y) &lt; 10){
         if (player = global.PLAYER){
             global.selectedFleet = id
@@ -77,6 +78,7 @@
 
 if (mouse_check_button_pressed(mb_right) &amp;&amp; global.selectedFleet == id){
     MoveControl()
+}
 }
 depth = -100-y
 </string>

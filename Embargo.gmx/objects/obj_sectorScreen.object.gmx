@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>-200</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -64,12 +64,16 @@ if mouse_check_button_pressed(mb_left){
         lockX = mouse_x
         lockY = mouse_y
     }
+    
+    if point_in_rectangle(mouse_x,mouse_y,x+90,y-150,x+100,y-140){
+        instance_destroy()
+    }
 }
 
 if mouse_check_button(mb_left){
     if dragged = true{
-        hx += (mouse_x-lockX)//view_xview
-        hy += (mouse_y-lockY)//view_yview
+        hx += (mouse_x-lockX)
+        hy += (mouse_y-lockY)
         lockX = mouse_x
         lockY = mouse_y
     }
@@ -104,10 +108,8 @@ if mouse_check_button_released(mb_left){
             <string>x = hx+view_xview
 y = hy+view_yview
 
-
-
 draw_set_colour(c_black)
-draw_set_alpha(.5)
+draw_set_alpha(.9)
 draw_rectangle(x-100,y-150,x+100,y+150,false)
 draw_set_colour(c_white)
 draw_set_alpha(1)
@@ -115,6 +117,8 @@ draw_rectangle(x-100,y-150,x+100,y+150,true)
 
 draw_set_font(fnt_huge)
 draw_set_halign(fa_middle)
+
+draw_sprite(spr_close,0,x+95,y-144)
 
 switch(global.selectedNode.type){
     case NODE_TYPES.PLANET: draw_text(x,y-135,global.selectedNode.name) break

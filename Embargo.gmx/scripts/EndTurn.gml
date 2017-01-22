@@ -12,6 +12,10 @@ if global.PLAYER > global.NUM_PLAYERS
     StartTurn()
 }
 
+with(obj_sectorScreen){
+    instance_destroy()
+}
+
 #define StartTurn
 //Player Specifics
 for(i = 1; i <= global.NUM_PLAYERS; i++)

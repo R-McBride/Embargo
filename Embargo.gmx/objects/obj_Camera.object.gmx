@@ -30,22 +30,41 @@ keyRight = keyboard_check(ord('D'))
 keyUp = keyboard_check(ord('W'))
 keyDown = keyboard_check(ord('S'))
 
+if mouse_x &lt; view_xview+5{
+    keyLeft += 1
+}
+if mouse_x &gt; view_xview+view_wview-5{
+    keyRight += 1
+}
+if mouse_y &lt; view_yview+5{
+    keyUp += 1
+}
+if mouse_y &gt; view_yview+view_hview-5{
+    keyDown += 1
+}
+
+
+
 if (keyRight-keyLeft) &gt; 0
 {
     x = max(x+(keyRight-keyLeft)*25,view_wview/2)
+    x = min(x,room_width-(view_wview/2))
 }
 else if (keyRight-keyLeft) &lt; 0
 {
     x = min(x+(keyRight-keyLeft)*25,room_width-(view_wview/2))
+    x = max(x,view_wview/2)
 }
 
 if (keyDown-keyUp) &gt; 0
 {
     y = max(y+(keyDown-keyUp)*25,view_hview/2)
+    y = min(y,room_height-(view_hview/2))
 }
 else if (keyDown-keyUp) &lt; 0
 {
     y = min(y+(keyDown-keyUp)*25,room_height-(view_hview/2))
+    y = max(y,view_hview/2)
 }
 
 
