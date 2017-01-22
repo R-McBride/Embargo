@@ -12,10 +12,10 @@
     <sprite>sprites\spr_actionButton</sprite>
     <sprite>sprites\spr_HUD</sprite>
     <sprite>sprites\spr_resourceIcons3</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\sprite7</sprite>
-    <sprite>sprites\sprite8</sprite>
-    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\spr_unitSlot</sprite>
+    <sprite>sprites\spr_unitIcon</sprite>
+    <sprite>sprites\spr_structureSlot</sprite>
+    <sprite>sprites\spr_structure</sprite>
     <sprite>sprites\sprite10</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -38,7 +38,7 @@
     <script>scripts\Setup.gml</script>
     <script>scripts\DrawHUD.gml</script>
     <script>scripts\planetSelect.gml</script>
-    <script>scripts\script17.gml</script>
+    <script>scripts\InfluenceSpread.gml</script>
     <script>scripts\script18.gml</script>
     <script>scripts\script19.gml</script>
     <script>scripts\script20.gml</script>
