@@ -174,4 +174,3 @@ part_emitter_region(ps,emitter1,x,x,y,y,ps_shape_ellipse,0);
 break
 
 }
-
