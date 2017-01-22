@@ -138,6 +138,7 @@ for (var i = 0; i < instance_number(Station); i += 1){
     }
 }*/
 
+
 #define InfluenceGain
 gainer = argument0
 gain = argument1
@@ -154,3 +155,4 @@ for(ii = 0; ii <= global.NUM_PLAYERS; ii++){
         planet.population[ii] -= b*planet.population[ii]/(planet.currentPop-(planet.population[gainer]-b))
     }
 }
+

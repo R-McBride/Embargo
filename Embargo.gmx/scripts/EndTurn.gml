@@ -16,6 +16,7 @@ with(obj_sectorScreen){
     instance_destroy()
 }
 
+
 #define StartTurn
 //Player Specifics
 for(i = 1; i <= global.NUM_PLAYERS; i++)
@@ -39,6 +40,7 @@ MovementRefresh()
 
 //Update player scores
 UpdateScore()
+
 
 #define Income
 var p = argument0
@@ -67,6 +69,7 @@ with(Node){
 global.ICAPITAL[p] = global.ICAPITAL_NODE[p]+global.ICAPITAL_POP[p]+2
 
 global.IPOWER[p] = global.IPOWER_NODE[p]+global.IPOWER_POP[p]+2
+
 
 #define MovementRefresh
 with (Fleet){
@@ -99,3 +102,4 @@ with (Station){
     global.PSCORE[player] += position.resources[3]*5
     global.PSCORE[player] += position.resources[4]*10
 }
+
