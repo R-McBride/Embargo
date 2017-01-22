@@ -68,7 +68,9 @@
           <argument>
             <kind>1</kind>
             <string>if (keyboard_check(vk_f1) &amp;&amp; global.selectedNode == self.id){
-    i = instance_create(x,y,Unit)
+    if(numFleetsPresent &lt; 3){
+        i = instance_create(x,y,Unit)
+    }
 }
 </string>
           </argument>
