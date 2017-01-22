@@ -103,5 +103,7 @@ for (var i = 0; i < numGroups; i++){
 testStation = instance_create (capPlanets[0].x, capPlanets[0].y, Station)
 
 testStation.position = capPlanets[0]
+testFleet = instance_create(capPlanets[0].x, capPlanets[0].y, Fleet)
+global.selectedFleet = testFleet
 testShip = instance_create(capPlanets[0].x, capPlanets[0].y, Unit)
 

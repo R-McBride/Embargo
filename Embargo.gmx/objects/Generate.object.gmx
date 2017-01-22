@@ -106,6 +106,54 @@ else
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="54">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tempNode = instance_nearest(mouse_x,mouse_y,Node)
+
+
+//check if the click is close to a planet and if you can move to that planet
+if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; global.selectedFleet.position == global.selectedNode &amp;&amp; tempNode.numFleetsPresent&lt;global.MAX_FLEETS){
+    for (var i = 0; i &lt; tempNode.numConnections; i++){
+        if (tempNode.connections[i] == global.selectedNode){
+        
+        //pop the fleet from the planet
+            for (var j = 0; j &lt; global.selectedNode.numFleetsPresent; j++){
+                if(global.selectedNode.fleetsPresent[j] == global.selectedFleet){
+                    fleetTemp = global.selectedNode.fleetsPresent[j]
+                    global.selectedNode.fleetsPresent[j] = global.selectedNode.fleetsPresent[global.selectedNode.numFleetsPresent - 1]
+                    global.selectedNode.fleetsPresent[global.selectedNode.numFleetsPresent - 1] = fleetTemp
+                    global.selectedNode.numFleetsPresent--
+                }
+            }
+        }
+    }
+    
+//move the fleet
+    global.selectedFleet.position = tempNode
+    tempNode.fleetsPresent[tempNode.numFleetsPresent] = global.selectedFleet
+    tempNode.numFleetsPresent++
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="53">
       <action>
         <libid>1</libid>
