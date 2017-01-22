@@ -2,7 +2,7 @@ for (var i = 0; i < instance_number(Station); i += 1){
 
     stations[i] = instance_find(Station,i); //find all the stations
     
-    stations[i].influence = ((4 + position.resources[3])/stations[i].position.currentPop)/10 //calculate influence output
+    stations[i].influence = ((4 + stations[i].position.resources[3])/stations[i].position.currentPop)/10 //calculate influence output
     
     k=0
     
