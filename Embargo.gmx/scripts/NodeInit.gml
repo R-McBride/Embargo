@@ -71,20 +71,20 @@ if (population[0] != 0){
     resistance = 2  //influence is devided by resistance
 }
 
-maxFleets = 3
+maxFleets = 4
 
 if (type = NODE_TYPES.PLANET){
     i = instance_create(x,y,obj_FleetSlot)
     i.space = false
     i.node = id
     fleetSlots[0] = i
-    maxFleets++
+    //maxFleets++
 }
 else{
     fleetSlots[0] = noone
 }
 
-i = instance_create(x,y+20,obj_FleetSlot)
+i = instance_create(x-20,y,obj_FleetSlot)
 i.node = id
 fleetSlots[1] = i
 
@@ -92,6 +92,6 @@ i = instance_create(x-15,y+15,obj_FleetSlot)
 i.node = id
 fleetSlots[2] = i
 
-i = instance_create(x-20,y,obj_FleetSlot)
+i = instance_create(x,y+20,obj_FleetSlot)
 i.node = id
 fleetSlots[3] = i
