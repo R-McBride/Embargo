@@ -76,14 +76,14 @@ enum PLANET_SIZE{
 }
 
 global.FACTION_COLOUR[0] = c_white
-global.FACTION_COLOUR[1] = make_colour_rgb(99,31,168)
-global.FACTION_COLOUR[2] = make_colour_rgb(45,65,165)
-global.FACTION_COLOUR[3] = make_colour_rgb(233,13,32)
-global.FACTION_COLOUR[4] = make_colour_rgb(66,168,31)
-global.FACTION_COLOUR[5] = make_colour_rgb(11,130,98)
-global.FACTION_COLOUR[6] = make_colour_rgb(187,196,202)
-global.FACTION_COLOUR[7] = make_colour_rgb(163,113,24)
-global.FACTION_COLOUR[8] = make_colour_rgb(218,62,81)
+global.FACTION_COLOUR[1] = make_colour_rgb(153,48,222)
+global.FACTION_COLOUR[2] = make_colour_rgb(70,102,220)
+global.FACTION_COLOUR[3] = make_colour_rgb(251,20,50)
+global.FACTION_COLOUR[4] = make_colour_rgb(103,222,48)
+global.FACTION_COLOUR[5] = make_colour_rgb(17,190,152)
+global.FACTION_COLOUR[6] = make_colour_rgb(234,238,241)
+global.FACTION_COLOUR[7] = make_colour_rgb(219,171,38)
+global.FACTION_COLOUR[8] = make_colour_rgb(247,97,127)
 
 global.RESOURCE_COLOUR[0] = make_colour_rgb(147,233,71)
 global.RESOURCE_COLOUR[1] = make_colour_rgb(139,37,46)
