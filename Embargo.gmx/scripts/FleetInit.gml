@@ -14,4 +14,4 @@ ships = ds_list_create()
 
 canMove = true
 
-player = 1
+player = global.PLAYER

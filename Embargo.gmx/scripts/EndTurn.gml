@@ -69,4 +69,3 @@ with (Fleet){
     }
     canMove = true
 }
-
