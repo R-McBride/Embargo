@@ -33,6 +33,7 @@ draw_text(hX+180,vX+6,'+'+string_format(global.IPOWER[global.PLAYER],2,1))
 draw_set_font(fnt_medium)
 draw_set_halign(fa_right)
 draw_text(hM-50,vX+10,'Turn: '+string(global.TURN))
+draw_text(hM-120,vX+10,'Player: '+string(global.PLAYER))
 
 
 //Node Details

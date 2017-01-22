@@ -98,17 +98,17 @@ global.TURN = 1
 global.PLAYER = 1
 
 //Player Variables
-for(i = 1; i < global.NUM_PLAYERS; i++)
+for(i = 1; i <= global.NUM_PLAYERS; i++)
 {
     //Starting Faction
-    global.FACTION[i] = 1
+    global.FACTION[i] = i
     global.CAPITAL[i] = random(10.0)
     global.POWER[i] = random(10.0)
     global.ICAPITAL[i] = 1.5
     global.IPOWER[i] = 1.5
 
     //Starting Diplomacy
-    for(ii = 1; ii < global.NUM_PLAYERS; ii++)
+    for(ii = 1; ii <= global.NUM_PLAYERS; ii++)
     {
         global.DIPLOMACY[i,ii] = DIPLOMACY_TYPE.NEUTRAL
     }

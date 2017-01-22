@@ -1,7 +1,7 @@
 #define EndTurn
 global.PLAYER += 1
 
-if global.PLAYER >= global.NUM_PLAYERS 
+if global.PLAYER > global.NUM_PLAYERS 
 {
     global.PLAYER = 1
     global.TURN += 1
@@ -11,7 +11,7 @@ if global.PLAYER >= global.NUM_PLAYERS
 
 #define StartTurn
 //Player Specifics
-for(i = 1; i < global.NUM_PLAYERS; i++)
+for(i = 1; i <= global.NUM_PLAYERS; i++)
 {
     //RECALC INCOMES
     
@@ -22,4 +22,3 @@ for(i = 1; i < global.NUM_PLAYERS; i++)
 
 //Influence Spread
 //InfluenceSpread()
-
