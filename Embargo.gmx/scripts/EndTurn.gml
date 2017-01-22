@@ -63,9 +63,10 @@ global.IPOWER[p] = global.IPOWER_NODE[p]+global.IPOWER_POP[p]+2
 
 #define MovementRefresh
 with (Fleet){
-    for (var i; i<ds_list_size(ships);i++){
+    for (var i = 0; i<ds_list_size(ships);i++){
         temp = ds_list_find_value(ships, i)
         temp.movesLeft = temp.unitSpeed
     }
+    canMove = true
 }
 

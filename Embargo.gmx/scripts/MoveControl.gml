@@ -5,7 +5,7 @@ moved = false
 prevNode = global.selectedFleet.position
 
 //check if the click is close to a planet and if you can move to that planet
-if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20 && tempNode.numFleetsPresent<tempNode.maxFleets){
+if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20 && tempNode.numFleetsPresent<tempNode.maxFleets && global.selectedFleet.canMove != false){
     for (var i = 0; i < tempNode.numConnections; i++){
         if (tempNode.connections[i] == prevNode){
 
@@ -40,3 +40,14 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20 && tempNode.numFleet
         }
     }
 }
+
+if (moved = true){
+    for (var i = 0; i < ds_list_size(global.selectedFleet.ships);i++){
+        temp = ds_list_find_value(global.selectedFleet.ships, i)
+        temp.movesLeft--
+        if(temp.movesLeft == 0){
+            global.selectedFleet.canMove = false
+        }
+    }
+}
+
