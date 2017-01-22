@@ -14,6 +14,7 @@ type = 1+irandom(99)
 
 planetSize = irandom(3)
 currentPop = 0
+partialPop = 0
 maxPop = 0
 population[global.NUM_PLAYERS] = 0
 influence[global.NUM_PLAYERS] = 0
@@ -23,32 +24,23 @@ sunColour = floor(random(4.5))
 
 for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
     if (random(global.RESOURCE_RARITY) > global.RESOURCE_RARITY - 1){
-        resources[i] = 1
+        resources[i] = choose(1,1,1,2)
     }
     else{
         resources[i] = 0
     }
 }
 
-if(planetSize == 0){
-    planetSize = PLANET_SIZE.SMALL
-}
-else if(planetSize == 1 || planetSize == 2){
-    planetSize = PLANET_SIZE.MEDIUM
-}
-else if(planetSize == 3){
-    planetSize = PLANET_SIZE.LARGE
-}
-
+//Type
     if(type<65){
             resources[0] += 2
             resources[1] += 1
             population[0] += irandom(resources[0]*planetSize-1)+1
             currentPop = population[0]
-            maxPop = resources[0]*planetSize
             type = NODE_TYPES.PLANET
             }
     else if(type<80){
+            resources[0] = 0
             resources[1] += 2
             resources[2] += 1
             type = NODE_TYPES.ASTEROID_BELT
@@ -58,18 +50,36 @@ else if(planetSize == 3){
             type = NODE_TYPES.OCEAN
             }
     else if(type<95){
+            resources[0] = 0
+            resources[1] = 0
             resources[4] += 2
             type = NODE_TYPES.NEBULA
             }  
     else{
+            resources[0] = 0
             resources[3] += 1
             resources[4] += 1
             sunColour = 5
             type = NODE_TYPES.BLACK_HOLE
             }      
 
-if (population[0] != 0){
+//Planet Size
+if type = NODE_TYPES.PLANET{
     resistance = 2  //influence is devided by resistance
+    
+    if(planetSize == 0){
+        planetSize = PLANET_SIZE.SMALL
+        resources[0] -= floor(resources[0]*.4)
+        resources[1] -= floor(resources[1]*.4)
+    }
+    else if(planetSize == 1 || planetSize == 2){
+        planetSize = PLANET_SIZE.MEDIUM
+    }
+    else if(planetSize == 3){
+        planetSize = PLANET_SIZE.LARGE
+        resources[0] += floor(resources[0]*.4)
+        resources[1] += floor(resources[1]*.4)
+    }
 }
 
 maxFleets = 4

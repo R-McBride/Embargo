@@ -87,6 +87,10 @@ if mouse_check_button_pressed(mb_left){
         i = instance_create(790,70,obj_button)
         i.type = VIEW_TYPE.INFLUENCE
         i.name = 'Influence'
+        
+        i = instance_create(790,90,obj_button)
+        i.type = VIEW_TYPE.GROWTH
+        i.name = 'Growth'
     }
 }
 
@@ -286,6 +290,21 @@ with(Node)
                 draw_text(x+50, y-10+(14*j),string_format(population[i],2,1))
                 j++
             } 
+        }
+    }
+    
+    draw_set_colour(global.RESOURCE_COLOUR[0])
+    draw_set_halign(fa_left)
+            
+    if global.VIEW = VIEW_TYPE.GROWTH
+    {
+        if currentPop &gt; 0{
+            j = resources[0]-(currentPop/planetSize)
+            if j &gt; 0{
+                j = ceil(((currentPop*3)-partialPop)/j)
+                draw_text(x+20, y-10,string_format(j,2,0)+' Turns to Growth')
+            }
+            draw_text(x+20, y+4,string_format(currentPop,2,0)+' Population')
         }
     }
 }

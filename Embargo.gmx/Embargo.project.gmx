@@ -38,6 +38,7 @@
     <script>scripts\Setup.gml</script>
     <script>scripts\DrawHUD.gml</script>
     <script>scripts\planetSelect.gml</script>
+    <script>scripts\Growth.gml</script>
     <script>scripts\InfluenceSpread.gml</script>
     <script>scripts\script18.gml</script>
     <script>scripts\script19.gml</script>

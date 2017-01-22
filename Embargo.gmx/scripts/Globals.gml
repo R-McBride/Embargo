@@ -65,7 +65,8 @@ enum DIPLOMACY_TYPE{
 enum VIEW_TYPE{
     NONE = 0 ,
     RESOURCE = 1 ,
-    INFLUENCE = 2   
+    INFLUENCE = 2 ,
+    GROWTH = 3  
 }
 
 enum PLANET_SIZE{
@@ -103,10 +104,14 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
 {
     //Starting Faction
     global.FACTION[i] = i
-    global.CAPITAL[i] = random(10.0)
-    global.POWER[i] = random(10.0)
+    global.CAPITAL[i] = 5
+    global.POWER[i] = 5
     global.ICAPITAL[i] = 1.5
     global.IPOWER[i] = 1.5
+    global.ICAPITAL_NODE[i] = 0
+    global.ICAPITAL_POP[i] = 0
+    global.IPOWER_NODE[i] = 0
+    global.IPOWER_POP[i] = 0
 
     //Starting Diplomacy
     for(ii = 1; ii <= global.NUM_PLAYERS; ii++)
