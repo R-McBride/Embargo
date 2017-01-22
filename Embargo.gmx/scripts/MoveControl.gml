@@ -8,13 +8,14 @@ prevNode = global.selectedFleet.position
 if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20 && tempNode.numFleetsPresent<tempNode.maxFleets){
     for (var i = 0; i < tempNode.numConnections; i++){
         if (tempNode.connections[i] == prevNode){
-        //set the fleet's position to the new position
-            global.selectedFleet.position = tempNode
+
             //loop through all of the fleet slots
             //starts at 1 to ignore ground units, currently
             for(var k = 1; k < tempNode.maxFleets; k++){
             //check if the fleet slot is empty
                 if(tempNode.fleetSlots[k].occupier == noone && moved == false){
+                        //set the fleet's position to the new position
+            global.selectedFleet.position = tempNode
                 //put the fleet in the fleet slot
                     tempNode.fleetSlots[k].occupier = global.selectedFleet
                     tempNode.numFleetsPresent++
