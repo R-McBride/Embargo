@@ -65,7 +65,7 @@ if mouse_check_button_pressed(mb_left){
         lockY = mouse_y
     }
     
-    if point_in_rectangle(mouse_x,mouse_y,x+90,y-150,x+100,y-140){
+    if point_in_rectangle(mouse_x,mouse_y,x+100,y-150,x+110,y-140){
         instance_destroy()
     }
 }
@@ -110,18 +110,18 @@ y = hy+view_yview
 
 draw_set_colour(c_black)
 draw_set_alpha(.9)
-draw_rectangle(x-110,y-150,x+110,y+150,false)
+draw_rectangle(x-115,y-150,x+115,y+150,false)
 draw_set_colour(c_white)
 draw_set_alpha(1)
-draw_rectangle(x-110,y-150,x+110,y+150,true)
+draw_rectangle(x-115,y-150,x+115,y+150,true)
 
 draw_set_font(fnt_huge)
 draw_set_halign(fa_middle)
 
-draw_sprite(spr_close,0,x+95,y-144)
+draw_sprite(spr_close,0,x+110,y-144)
 
 switch(global.selectedNode.type){
-    case NODE_TYPES.PLANET: draw_text(x,y-135,global.selectedNode.name) break
+    case NODE_TYPES.PLANET: draw_text(x,y-130,global.selectedNode.name) break
     case NODE_TYPES.ASTEROID_BELT: draw_text(x,y-135,'Asteroid Field') break
     case NODE_TYPES.OCEAN: draw_text(x,y-135,'Ocean') break
     case NODE_TYPES.NEBULA: draw_text(x,y-135,'Nebula') break
