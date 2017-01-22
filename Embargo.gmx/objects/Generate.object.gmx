@@ -51,7 +51,7 @@ instance_create(x,y,obj_Camera)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MoveControl()
+            <string>//MoveControl()
 
 ii = instance_nearest(mouse_x,mouse_y,Node)
 
@@ -97,7 +97,7 @@ if keyboard_check_pressed(vk_space)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tempNode = instance_nearest(mouse_x,mouse_y,Node)
+            <string>/*tempNode = instance_nearest(mouse_x,mouse_y,Node)
 
 //check if the click is close to a planet and if you can move to that planet
 if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; global.selectedFleet.position == global.selectedNode &amp;&amp; tempNode.numFleetsPresent&lt;global.MAX_FLEETS){
@@ -121,7 +121,7 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; globa
     tempNode.fleetsPresent[tempNode.numFleetsPresent] = global.selectedFleet
     tempNode.numFleetsPresent++
 }
-
+*/
 </string>
           </argument>
         </arguments>

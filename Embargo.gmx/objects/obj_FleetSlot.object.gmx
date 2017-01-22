@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>space = true
-node = -4
+node = noone
+occupier = noone
 </string>
           </argument>
         </arguments>

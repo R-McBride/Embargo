@@ -103,9 +103,9 @@ for (var i = 0; i < numGroups; i++){
 testStation = instance_create (capPlanets[0].x, capPlanets[0].y, Station)
 
 testStation.position = capPlanets[0]
-testFleet = instance_create(capPlanets[0].x-20, capPlanets[0].y, Fleet)
-testShip = instance_create(capPlanets[0].x-20, capPlanets[0].y, Unit)
+testFleet = instance_create(capPlanets[0].fleetSlots[1].x, capPlanets[0].fleetSlots[1].y, Fleet)
+testShip = instance_create(testFleet.x, testFleet.y, Unit)
 
-testFleet = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Fleet)
-testShip = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Unit)
+//testFleet = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Fleet)
+//testShip = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Unit)
 

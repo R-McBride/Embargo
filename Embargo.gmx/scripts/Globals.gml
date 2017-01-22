@@ -6,7 +6,7 @@ global.selectedNode = noone
 global.selectedFleet = noone
 global.selectedUnit = noone
 
-global.MAX_FLEETS = 3
+//global.MAX_FLEETS = 3
 
 global.NUM_NODE_TYPES = 5
 enum NODE_TYPES {
