@@ -30,6 +30,9 @@ InfluenceSpread()
 //Growth
 Growth()
 
+//Refresh all move values
+MovementRefresh()
+
 #define Income
 var p = argument0
 
@@ -55,4 +58,14 @@ with(Node){
 
 //Final Incomes
 global.ICAPITAL[p] = global.ICAPITAL_NODE[p]+global.ICAPITAL_POP[p]+2
+
 global.IPOWER[p] = global.IPOWER_NODE[p]+global.IPOWER_POP[p]+2
+
+#define MovementRefresh
+with (Fleet){
+    for (var i; i<ds_list_size(ships);i++){
+        temp = ds_list_find_value(ships, i)
+        temp.movesLeft = temp.unitSpeed
+    }
+}
+
