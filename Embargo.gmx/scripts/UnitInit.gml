@@ -1,6 +1,8 @@
 unitSpeed = 1
 influence = 0
 
+movesLeft = unitSpeed
+
 created = false
 
 tempNode = instance_nearest(x,y,Node)
