@@ -1,8 +1,9 @@
 connections[global.NUM_PLANETS] = noone
 numConnections = 0
 group = 0
-fleetSlots[2] = noone
+fleetSlots[3] = noone
 numFleetsPresent = 0
+difficult = false
 name = choose('Gar','Farr','Hel','Pal','Tek')+
 choose('','','','','','','','','','-')+
 choose('gon','tal','ala','ian','ah')+' '+
@@ -70,3 +71,21 @@ if (population[0] != 0){
     resistance = 2  //influence is devided by resistance
 }
 
+if (type = NODE_TYPES.PLANET){
+    i = instance_create(x,y,obj_FleetSlot)
+    i.space = false
+    i.node = id
+    fleetSlots[0] = i
+}
+
+i = instance_create(x-20,y,obj_FleetSlot)
+i.node = id
+fleetSlots[1] = i
+
+i = instance_create(x-15,y+15,obj_FleetSlot)
+i.node = id
+fleetSlots[2] = i
+
+i = instance_create(x,y+20,obj_FleetSlot)
+i.node = id
+fleetSlots[3] = i

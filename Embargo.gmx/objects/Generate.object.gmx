@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -91,7 +91,6 @@ if keyboard_check_pressed(vk_escape)
           <argument>
             <kind>1</kind>
             <string>tempNode = instance_nearest(mouse_x,mouse_y,Node)
-
 
 //check if the click is close to a planet and if you can move to that planet
 if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; global.selectedFleet.position == global.selectedNode &amp;&amp; tempNode.numFleetsPresent&lt;global.MAX_FLEETS){
@@ -215,10 +214,6 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)&lt;20  &amp;&amp; globa
             draw_line(x,y,connections[i].x,connections[i].y)
             draw_set_colour(c_white)
         }
-        
-        draw_sprite(spr_unitSlot,0,x-20,y)
-        draw_sprite(spr_unitSlot,0,x-15,y+15)
-        draw_sprite(spr_unitSlot,0,x,y+20)
     }
 }
 
