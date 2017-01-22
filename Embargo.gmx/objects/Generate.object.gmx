@@ -276,15 +276,14 @@ with(Node)
         var j = 0
         
         for (var i = 0; i &lt;= global.NUM_PLAYERS; i++){
-            if(population[i] != 0){
+            if(population[i] &gt;= .1){
                 if i != 0 {
                     draw_sprite(spr_factionIcons, i, x+18, y-10+(14*j))
                 }
                 draw_set_colour(global.FACTION_COLOUR[i])
                 draw_text(x+50, y-10+(14*j),string_format(population[i],2,1))
-            }
-               
                 j++
+            } 
         }
     }
 }

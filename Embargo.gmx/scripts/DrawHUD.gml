@@ -39,7 +39,7 @@ draw_rectangle(hM-220,vX-1,hM-120,vX+20,true)
 switch(global.VIEW){
 case VIEW_TYPE.NONE: draw_text(hM-170,vX+10,'Views') break
 case VIEW_TYPE.RESOURCE: draw_text(hM-170,vX+10,'Resources') break
-case VIEW_TYPE.INFLUENCE: draw_text(hM-170,vX+10,'Influences'+string(global.PLAYER)) break
+case VIEW_TYPE.INFLUENCE: draw_text(hM-170,vX+10,'Influences') break
 }
 
 //Node Details

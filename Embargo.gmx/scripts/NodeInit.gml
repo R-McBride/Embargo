@@ -16,6 +16,7 @@ planetSize = irandom(3)
 currentPop = 0
 maxPop = 0
 population[global.NUM_PLAYERS] = 0
+influence[global.NUM_PLAYERS] = 0
 resistance = 0
 
 sunColour = floor(random(4.5))

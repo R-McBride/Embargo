@@ -106,6 +106,12 @@ testStation.position = capPlanets[0]
 testFleet = instance_create(capPlanets[0].fleetSlots[1].x, capPlanets[0].fleetSlots[1].y, Fleet)
 testShip = instance_create(testFleet.x, testFleet.y, Unit)
 
+testStation = instance_create (sector.nodes[1].x, sector.nodes[1].y, Station)
+testStation.position = sector.nodes[1]
+
+testStation.player = 2
+
+
 //testFleet = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Fleet)
 //testShip = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Unit)
 

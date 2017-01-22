@@ -1,4 +1,46 @@
-//Find all stations
+#define InfluenceSpread
+//Establish Influence
+with(Node){
+    for(var i = 1; i < global.NUM_PLAYERS; i++){
+    influence[i] = 0
+    }
+}
+
+with(Station){
+    position.influence[player] += 4
+}
+
+with(Node){
+    for(var i = 1; i < global.NUM_PLAYERS; i++){
+        if population[i] >= 1{
+            influence[i] += resources[3]+(population[i]*.1)
+        }
+    }    
+}
+
+//Apply Influence
+for(var i = 1; i < global.NUM_PLAYERS; i++){
+    with(Node){
+        if influence[i] != 0{
+            InfluenceGain(i, influence[i], id)
+            //show_message('Player: '+string(i)+' gains '+string(influence[i])+' influence at '+string(name))
+            
+            d = 1
+            for(var k = 0; k < numConnections;k++){
+                if (connections[k].currentPop >= 1 && connections[k].population[i] < connections[k].currentPop){
+                    d++
+                }
+            }
+            for(var k = 0; k < numConnections;k++){
+                if (connections[k].currentPop >= 1 && connections[k].population[i] < connections[k].currentPop){
+                    InfluenceGain(i, influence[i]/d, connections[k])
+                    //show_message('Player: '+string(i)+' gains '+string(influence[i]/d)+' influence at '+string(connections[k].name))
+                }
+            }
+        }
+    }
+}
+/*Find all stations
 for (var i = 0; i < instance_number(Station); i += 1){
 
     stations[i] = instance_find(Station,i); //find all the stations
@@ -17,7 +59,7 @@ for (var i=0;i<instance_number(Station);i++){
     ii = tempInf/ii //divide by number of population not controled by you 
     for (j = 0; j<global.NUM_PLAYERS;j++){
         if (stations[i].player != j){
-            target.population[j]*=(1-(ii)) //subtract above number from enemies
+            target.population[j] -= (ii) //subtract above number from enemies
         }
         else{
             target.population[j] += tempInf   //add influence to your control
@@ -91,3 +133,17 @@ for (var i = 0; i < instance_number(Station); i += 1){
         }
     }
 }*/
+
+#define InfluenceGain
+gainer = argument0
+gain = argument1
+planet = argument2
+
+b = min(gain, planet.currentPop-planet.population[gainer])/planet.resistance
+planet.population[gainer] += b
+        
+for(ii = 0; ii < global.NUM_PLAYERS; ii++){
+    if ii != gainer{
+        planet.population[ii] -= b*planet.population[ii]/(planet.currentPop-(planet.population[gainer]-b))
+    }
+}
