@@ -265,6 +265,7 @@ with(Node)
                 for(var ii = resources[i]; ii &gt; 0; ii--){
                     if ii &gt;= 5{
                     draw_sprite(spr_resourceIcons3, i, x+18+(14*iii), y-10+(14*j))
+                    draw_text(x+18+(14*iii), y-10+(14*j),'5')
                     ii -= 4
                     }
                     else{

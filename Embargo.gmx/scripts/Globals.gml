@@ -104,10 +104,10 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
 {
     //Starting Faction
     global.FACTION[i] = i
-    global.CAPITAL[i] = 5
-    global.POWER[i] = 5
-    global.ICAPITAL[i] = 1.5
-    global.IPOWER[i] = 1.5
+    global.CAPITAL[i] = 0
+    global.POWER[i] = 0
+    global.ICAPITAL[i] = 2
+    global.IPOWER[i] = 2
     global.ICAPITAL_NODE[i] = 0
     global.ICAPITAL_POP[i] = 0
     global.IPOWER_NODE[i] = 0

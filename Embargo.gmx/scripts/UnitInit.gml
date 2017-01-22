@@ -1,5 +1,6 @@
 unitSpeed = 1
 influence = 0
+player = 0
 
 
 movesLeft = unitSpeed
