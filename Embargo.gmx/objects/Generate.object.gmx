@@ -51,7 +51,9 @@ instance_create(x,y,obj_Camera)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ii = instance_nearest(mouse_x,mouse_y,Node)
+            <string>MoveControl()
+
+ii = instance_nearest(mouse_x,mouse_y,Node)
 
 if point_distance(ii.x,ii.y,mouse_x,mouse_y) &lt; 25
 {
@@ -61,47 +63,12 @@ else
 {
     hover = noone
 }
+
+if keyboard_check_pressed(vk_escape)
+{
+    global.selectedNode = noone
+}
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>MoveControl</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

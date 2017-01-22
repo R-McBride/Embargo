@@ -3,7 +3,11 @@ numConnections = 0
 group = 0
 fleetSlots[3] = noone
 numFleetsPresent = 0
-
+name = choose('Gar','Farr','Hel','Pal','Tek')+
+choose('','','','','','','','','','-')+
+choose('gon','tal','ala','ian','ah')+' '+
+choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+
+choose('','','','','','','','','','','','','a','a','b','c')
 
 type = irandom(11)
 
@@ -39,7 +43,7 @@ for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
             resources[4] += 2
             type = NODE_TYPES.NEBULA
             }  
-    else if(type<11){
+    else{
             resources[3] += 1
             resources[4] += 1
             sunColour = 5
