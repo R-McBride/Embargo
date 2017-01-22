@@ -100,17 +100,24 @@ for (var i = 0; i < numGroups; i++){
     
 }
 
-testStation = instance_create (capPlanets[0].x, capPlanets[0].y, Station)
+//testStation = instance_create (capPlanets[0].x, capPlanets[0].y, Station)
 
-testStation.position = capPlanets[0]
-testFleet = instance_create(capPlanets[0].fleetSlots[1].x, capPlanets[0].fleetSlots[1].y, Fleet)
-testShip = instance_create(testFleet.x, testFleet.y, Unit)
+//testStation.position = capPlanets[0]
+//testFleet = instance_create(capPlanets[0].fleetSlots[1].x, capPlanets[0].fleetSlots[1].y, Fleet)
+//testShip = instance_create(testFleet.x, testFleet.y, Unit)
 
-testStation = instance_create (sector.nodes[1].x, sector.nodes[1].y, Station)
-testStation.position = sector.nodes[1]
-
-testStation.player = 2
-
+i = 1
+for(ii = 0; i <= global.NUM_PLAYERS; ii++)
+{
+    if sector.nodes[ii].type = NODE_TYPES.PLANET
+    {
+    testStation = instance_create (sector.nodes[ii].x, sector.nodes[ii].y, Station)
+    testStation.position = sector.nodes[ii]
+    testStation.player = i
+    
+    i++
+    }
+}
 
 //testFleet = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Fleet)
 //testShip = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Unit)

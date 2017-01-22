@@ -10,7 +10,7 @@ choose('gon','tal','ala','ian','ah')+' '+
 choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+
 choose('','','','','','','','','','','','','a','a','b','c')
 
-type = irandom(10)
+type = 1+irandom(99)
 
 planetSize = irandom(3)
 currentPop = 0
@@ -40,7 +40,7 @@ else if(planetSize == 3){
     planetSize = PLANET_SIZE.LARGE
 }
 
-    if(type<5){
+    if(type<65){
             resources[0] += 2
             resources[1] += 1
             population[0] += irandom(resources[0]*planetSize-1)+1
@@ -48,16 +48,16 @@ else if(planetSize == 3){
             maxPop = resources[0]*planetSize
             type = NODE_TYPES.PLANET
             }
-    else if(type<7){
+    else if(type<80){
             resources[1] += 2
             resources[2] += 1
             type = NODE_TYPES.ASTEROID_BELT
             }
-    else if(type<9){
+    else if(type<85){
             resources[0] += 3
             type = NODE_TYPES.OCEAN
             }
-    else if(type<10){
+    else if(type<95){
             resources[4] += 2
             type = NODE_TYPES.NEBULA
             }  

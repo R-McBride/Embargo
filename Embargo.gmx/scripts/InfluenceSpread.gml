@@ -1,7 +1,7 @@
 #define InfluenceSpread
 //Establish Influence
 with(Node){
-    for(var i = 1; i < global.NUM_PLAYERS; i++){
+    for(var i = 1; i <= global.NUM_PLAYERS; i++){
     influence[i] = 0
     }
 }
@@ -11,7 +11,7 @@ with(Station){
 }
 
 with(Node){
-    for(var i = 1; i < global.NUM_PLAYERS; i++){
+    for(var i = 1; i <= global.NUM_PLAYERS; i++){
         if population[i] >= 1{
             influence[i] += resources[3]+(population[i]*.1)
         }
@@ -19,11 +19,10 @@ with(Node){
 }
 
 //Apply Influence
-for(var i = 1; i < global.NUM_PLAYERS; i++){
+for(var i = 1; i <= global.NUM_PLAYERS; i++){
     with(Node){
         if influence[i] != 0{
             InfluenceGain(i, influence[i], id)
-            //show_message('Player: '+string(i)+' gains '+string(influence[i])+' influence at '+string(name))
             
             d = 1
             for(var k = 0; k < numConnections;k++){
@@ -34,7 +33,6 @@ for(var i = 1; i < global.NUM_PLAYERS; i++){
             for(var k = 0; k < numConnections;k++){
                 if (connections[k].currentPop >= 1 && connections[k].population[i] < connections[k].currentPop){
                     InfluenceGain(i, influence[i]/d, connections[k])
-                    //show_message('Player: '+string(i)+' gains '+string(influence[i]/d)+' influence at '+string(connections[k].name))
                 }
             }
         }
