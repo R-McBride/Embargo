@@ -33,6 +33,9 @@ Growth()
 //Refresh all move values
 MovementRefresh()
 
+//Update player scores
+UpdateScore()
+
 #define Income
 var p = argument0
 
@@ -68,4 +71,22 @@ with (Fleet){
         temp.movesLeft = temp.unitSpeed
     }
     canMove = true
+}
+#define UpdateScore
+
+with (Node){
+    if (type = NODE_TYPES.PLANET){
+        for (var i = 1; i <= global.NUM_PLAYERS; i++){
+            global.PSCORE[i] += population[i]
+            if (population[i] > currentPop/2){
+                global.PSCORE[i] += 5
+            }
+        }
+    }
+}
+
+with (Station){
+    global.PSCORE[player] += position.resources[2]*2
+    global.PSCORE[player] += position.resources[3]*5
+    global.PSCORE[player] += position.resources[4]*10
 }
