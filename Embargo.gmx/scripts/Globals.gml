@@ -68,6 +68,12 @@ enum VIEW_TYPE{
     INFLUENCE = 2   
 }
 
+enum PLANET_SIZE{
+    SMALL = 2,
+    MEDIUM = 3,
+    LARGE = 5
+}
+
 global.FACTION_COLOUR[1] = make_colour_rgb(99,31,168)
 global.FACTION_COLOUR[2] = make_colour_rgb(45,65,165)
 global.FACTION_COLOUR[3] = make_colour_rgb(233,13,32)

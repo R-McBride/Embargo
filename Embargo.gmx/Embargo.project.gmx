@@ -62,6 +62,7 @@
     <object>objects\object10</object>
     <object>objects\object11</object>
     <object>objects\object12</object>
+    <object>objects\obj_FleetSlot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

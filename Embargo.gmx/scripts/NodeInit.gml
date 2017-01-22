@@ -9,9 +9,13 @@ choose('gon','tal','ala','ian','ah')+' '+
 choose('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII')+
 choose('','','','','','','','','','','','','a','a','b','c')
 
-type = irandom(11)
+type = irandom(10)
 
+planetSize = irandom(3)
+currentPop = 0
+maxPop = 0
 population[0] = 0
+resistance = 0
 
 sunColour = floor(random(4.5))
 
@@ -24,10 +28,22 @@ for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
     }
 }
 
+if(planetSize == 0){
+    planetSize = PLANET_SIZE.SMALL
+}
+else if(planetSize == 1 || planetSize == 2){
+    planetSize = PLANET_SIZE.MEDIUM
+}
+else if(planetSize == 3){
+    planetSize = PLANET_SIZE.LARGE
+}
+
     if(type<5){
             resources[0] += 2
             resources[1] += 1
-            population[0] += resources[0]*3
+            population[0] += irandom(resources[0]*planetSize-1)+1
+            currentPop = population[0]
+            maxPop = resources[0]*planetSize
             type = NODE_TYPES.PLANET
             }
     else if(type<7){
@@ -50,4 +66,7 @@ for (var i = 0; i < global.NUM_RESOURCE_TYPES; i++){
             type = NODE_TYPES.BLACK_HOLE
             }      
 
+if (population[0] != 0){
+    resistance = 2  //influence is devided by resistance
+}
 
