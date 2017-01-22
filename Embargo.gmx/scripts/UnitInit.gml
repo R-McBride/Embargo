@@ -31,6 +31,8 @@ tempNode = instance_nearest(x,y,Node)
 
 
 
+
+
 #define createFleetAtLoc
 for(i = 1; i < tempNode.maxFleets; i++){
     if(tempNode.fleetSlots[i].occupier == noone && created == false){
