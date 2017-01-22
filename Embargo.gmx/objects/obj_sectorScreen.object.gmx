@@ -110,10 +110,10 @@ y = hy+view_yview
 
 draw_set_colour(c_black)
 draw_set_alpha(.9)
-draw_rectangle(x-100,y-150,x+100,y+150,false)
+draw_rectangle(x-110,y-150,x+110,y+150,false)
 draw_set_colour(c_white)
 draw_set_alpha(1)
-draw_rectangle(x-100,y-150,x+100,y+150,true)
+draw_rectangle(x-110,y-150,x+110,y+150,true)
 
 draw_set_font(fnt_huge)
 draw_set_halign(fa_middle)
