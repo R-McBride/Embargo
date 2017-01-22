@@ -50,5 +50,14 @@ if (moved = true){
         }
     }
     updateVision()
+    
+    for(var i = 0; i < tempNode.maxFleets; i++){
+        if(global.selectedFleet != noone){
+            if(tempNode.fleetSlots[i].occupier != noone && tempNode.fleetSlots[i].occupier.player != global.selectedFleet.player){
+                //add another if for if they're allied before doing the following
+                fightController(global.selectedFleet,tempNode.fleetSlots[i].occupier)
+            }
+        }
+    }
 }
 
