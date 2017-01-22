@@ -1,5 +1,8 @@
 #define EndTurn
 global.PLAYER += 1
+global.selectedNode = noone
+global.selectedFleet = noone
+global.selectedUnit = noone
 
 if global.PLAYER > global.NUM_PLAYERS 
 {
@@ -21,4 +24,4 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
 }
 
 //Influence Spread
-//InfluenceSpread()
+InfluenceSpread()
