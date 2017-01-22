@@ -32,8 +32,7 @@ draw_set_halign(fa_left)
 draw_text(hX+180,vX+6,'+'+string_format(global.IPOWER[global.PLAYER],2,1))
 
 //Node Details
-if global.selectedNode != noone
-{
+if global.selectedNode != noone{
     draw_set_colour(c_black)
     draw_set_alpha(.5)
     draw_rectangle(hX+40,vX+80,hX+240,vX+400,false)
@@ -44,13 +43,12 @@ if global.selectedNode != noone
     draw_set_font(fnt_huge)
     draw_set_halign(fa_middle)
     
-    switch(global.selectedNode.type)
-    {
-    case NODE_TYPES.PLANET: draw_text(hX+140,vX+100,global.selectedNode.name) break
-    case NODE_TYPES.ASTEROID_BELT: draw_text(hX+140,vX+100,'Asteroid Field') break
-    case NODE_TYPES.OCEAN: draw_text(hX+140,vX+100,'Ocean') break
-    case NODE_TYPES.NEBULA: draw_text(hX+140,vX+100,'Nebula') break
-    case NODE_TYPES.BLACK_HOLE: draw_text(hX+140,vX+100,'Black Hole') break
+    switch(global.selectedNode.type){
+        case NODE_TYPES.PLANET: draw_text(hX+140,vX+100,global.selectedNode.name) break
+        case NODE_TYPES.ASTEROID_BELT: draw_text(hX+140,vX+100,'Asteroid Field') break
+        case NODE_TYPES.OCEAN: draw_text(hX+140,vX+100,'Ocean') break
+        case NODE_TYPES.NEBULA: draw_text(hX+140,vX+100,'Nebula') break
+        case NODE_TYPES.BLACK_HOLE: draw_text(hX+140,vX+100,'Black Hole') break
     }
 }
 

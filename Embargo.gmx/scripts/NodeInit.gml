@@ -1,7 +1,7 @@
 connections[global.NUM_PLANETS] = noone
 numConnections = 0
 group = 0
-fleetSlots[3] = noone
+fleetSlots[2] = noone
 numFleetsPresent = 0
 name = choose('Gar','Farr','Hel','Pal','Tek')+
 choose('','','','','','','','','','-')+
