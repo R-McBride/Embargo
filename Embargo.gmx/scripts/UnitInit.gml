@@ -1,6 +1,6 @@
 #define UnitInit
 unitSpeed = 1
-influence = 0
+influence = -1
 player = global.PLAYER
 
 

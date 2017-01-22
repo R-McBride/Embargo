@@ -144,10 +144,12 @@ gain = argument1
 planet = argument2
 
 b = min(gain, planet.currentPop-planet.population[gainer])/planet.resistance
+if (b<0){
+    b = 0
+}
 planet.population[gainer] += b
         
 for(ii = 0; ii < global.NUM_PLAYERS; ii++){
     if ii != gainer{
         planet.population[ii] -= b*planet.population[ii]/(planet.currentPop-(planet.population[gainer]-b))
     }
-}
