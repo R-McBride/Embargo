@@ -19,7 +19,7 @@ partialPop = 0
 maxPop = 0
 population[global.NUM_PLAYERS] = 0
 influence[global.NUM_PLAYERS] = 0
-resistance = 0
+resistance = 1
 
 sunColour = choose(c_red,c_yellow,c_teal,c_white,c_orange)
 
