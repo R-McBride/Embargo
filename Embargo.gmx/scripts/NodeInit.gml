@@ -78,15 +78,21 @@ if type = NODE_TYPES.PLANET{
         planetSize = PLANET_SIZE.SMALL
         resources[0] -= floor(resources[0]*.4)
         resources[1] -= floor(resources[1]*.4)
+        buildings[1] = 0
+        buildSlots = 2
     }
     else if(planetSize == 1 || planetSize == 2){
         planetSize = PLANET_SIZE.MEDIUM
+        buildings[2] = 0
+        buildSlots = 3
     }
     else if(planetSize == 3){
         planetSize = PLANET_SIZE.LARGE
         resources[0] += floor(resources[0]*.4)
         resources[1] += floor(resources[1]*.4)
-    }
+        buildings[4] = 0
+        buildSlots = 5
+        }
 }
 
 maxFleets = 4
