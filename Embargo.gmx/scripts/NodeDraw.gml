@@ -9,6 +9,7 @@ for (var i = 0;i < numConnections;i++){
     switch (type){
         case (NODE_TYPES.PLANET):
             draw_set_colour(c_green)
+            draw_circle(x + 10*cos((get_timer()/1000000) + offset), y + 10*sin((get_timer()/1000000) + offset), 1+planetSize, false)
             break
         case (NODE_TYPES.ASTEROID_BELT):
             draw_set_colour(c_gray)

@@ -112,6 +112,7 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
     global.ICAPITAL_POP[i] = 0
     global.IPOWER_NODE[i] = 0
     global.IPOWER_POP[i] = 0
+    global.PSCORE[i] = 0
 
     //Starting Diplomacy
     for(ii = 1; ii <= global.NUM_PLAYERS; ii++)

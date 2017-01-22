@@ -18,6 +18,12 @@ with(Node){
     }    
 }
 
+with (Fleet){
+    for (var i = 0; i < ds_list_size(ships);i++){
+        position.influence[player] +=  ds_list_find_value(ships, i).influence
+    }
+}
+
 //Apply Influence
 for(var i = 1; i <= global.NUM_PLAYERS; i++){
     with(Node){
