@@ -80,7 +80,6 @@ with (Fleet){
 =======
 }
 #define UpdateScore
-
 with (Node){
     if (type = NODE_TYPES.PLANET){
         for (var i = 1; i <= global.NUM_PLAYERS; i++){
@@ -97,4 +96,3 @@ with (Station){
     global.PSCORE[player] += position.resources[3]*5
     global.PSCORE[player] += position.resources[4]*10
 }
->>>>>>> origin/master
