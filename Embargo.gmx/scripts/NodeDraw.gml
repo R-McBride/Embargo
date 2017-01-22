@@ -27,6 +27,7 @@
 if(global.selectedNode == self.id){
     draw_set_colour(c_lime)
     draw_circle(x,y,15,true)
+    draw_circle(x,y,15.5,true)
     draw_circle(x,y,16,true)
     
 }
