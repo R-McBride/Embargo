@@ -4,9 +4,9 @@ tempNode = instance_nearest(mouse_x,mouse_y,Node)
 moved = false
 
 //check if the click is close to a planet and if you can move to that planet
-if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20  && global.selectedFleet.position == global.selectedNode && tempNode.numFleetsPresent<tempNode.maxFleets){
+if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20 && tempNode.numFleetsPresent<tempNode.maxFleets){
     for (var i = 0; i < tempNode.numConnections; i++){
-        if (tempNode.connections[i] == global.selectedNode){//triangle
+        if (tempNode.connections[i] == global.selectedFleet.position){
         
         //move the fleet
 
@@ -27,14 +27,12 @@ if(point_distance(mouse_x,mouse_y,tempNode.x,tempNode.y)<20  && global.selectedF
         }
     }
         //pop the fleet from the planet
-            for (var j = 0; j < global.selectedNode.numFleetsPresent; j++){
-                if(global.selectedNode.fleetSlots[j] == global.selectedFleet){
-                    global.selectedNode.fleetSlots[j].occupier = noone
-                    global.selectedNode.numFleetsPresent--
+            for (var j = 0; j < global.selectedFleet.position.numFleetsPresent; j++){
+                if(global.selectedFleet.position.fleetSlots[j] == global.selectedFleet){
+                    global.selectedFleet.position.fleetSlots[j].occupier = noone
+                    global.selectedFleet.position.numFleetsPresent--
                 }
             }
-            
-            global.selectedNode = tempNode
-        }//triangle
+        }
     }
 }
