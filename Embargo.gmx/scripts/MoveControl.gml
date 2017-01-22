@@ -49,5 +49,6 @@ if (moved = true){
             global.selectedFleet.canMove = false
         }
     }
+    updateVision()
 }
 

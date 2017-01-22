@@ -121,6 +121,8 @@ for(ii = 0; i <= global.NUM_PLAYERS; ii++)
     }
 }
 
+updateVision()
+
 //testFleet = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Fleet)
 //testShip = instance_create(capPlanets[0].x-15, capPlanets[0].y+15, Unit)
 
