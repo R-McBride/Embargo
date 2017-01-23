@@ -49,8 +49,11 @@ if (moved = true){
             global.selectedFleet.canMove = false
         }
     }
+    if(!tempNode.hasBeenExplored){
+        global.PSCORE[global.PLAYER] += 5
+        tempNode.hasBeenExplored = true
+    }
     tempNode.isVisible = true
-    tempNode.hasBeenExplored = true
     updateVision()
     
     for(var i = 1; i < tempNode.maxFleets; i++){
