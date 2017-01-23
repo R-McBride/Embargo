@@ -116,6 +116,7 @@ for(ii = 0; i <= global.NUM_PLAYERS; ii++)
     testStation.player = i
     
     sector.nodes[ii].isVisible = true
+    sector.nodes[ii].hasBeenExplored = true
     sector.nodes[ii].stationPresent = true
     sector.nodes[ii].stationSlot = testStation
     i++

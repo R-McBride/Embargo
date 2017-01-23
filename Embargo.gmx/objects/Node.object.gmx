@@ -124,7 +124,7 @@ if (global.selectedNode == self.id){
           <argument>
             <kind>1</kind>
             <string>//Draw Connections
-if(isVisible = true){
+if(isVisible &amp;&amp; hasBeenExplored){
     draw_set_colour(c_dkgray)
     
     for (var i = 0;i &lt; numConnections;i++){

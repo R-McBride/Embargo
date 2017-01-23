@@ -22,7 +22,7 @@ isVisible = false
 else{
 isVisible = true
 }
-
+hasBeenExplored = false
 planetSize = irandom(3)
 currentPop = 0
 partialPop = 0

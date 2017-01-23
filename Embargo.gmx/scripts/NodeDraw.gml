@@ -25,7 +25,7 @@ if(isVisible != false){
     draw_circle(x,y,3,false)
 }
 
-if(isVisible = 2){
+if(hasBeenExplored != true && isVisible == true){
 draw_set_colour(c_yellow)
 draw_text(x,y-30,'?')
 }

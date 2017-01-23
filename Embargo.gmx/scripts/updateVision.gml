@@ -1,14 +1,17 @@
 with(Node){
-
+    if (isVisible != true || hasBeenExplored != true){
+    
     //Full Vision
-    if numFleetsPresent != 0{
-        isVisible = true
-    }
-    if isVisible != true{
+        if (numFleetsPresent != 0){
+            isVisible = true
+            hasBeenExplored = true
+        }
+        else{
     //Partial Vision
-        for(i = 0; i < numConnections; i++){
-            if(connections[i].isVisible = true){
-                isVisible = 2
+            for(var i = 0; i < numConnections; i++){
+                if(connections[i].isVisible && connections[i].hasBeenExplored){
+                    isVisible = true
+                }
             }
         }
     }

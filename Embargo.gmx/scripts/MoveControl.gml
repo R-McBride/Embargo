@@ -49,6 +49,8 @@ if (moved = true){
             global.selectedFleet.canMove = false
         }
     }
+    tempNode.isVisible = true
+    tempNode.hasBeenExplored = true
     updateVision()
     
     for(var i = 1; i < tempNode.maxFleets; i++){
