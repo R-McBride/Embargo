@@ -51,11 +51,20 @@ if (moved = true){
     }
     updateVision()
     
-    for(var i = 0; i < tempNode.maxFleets; i++){
+    for(var i = 1; i < tempNode.maxFleets; i++){
         if(global.selectedFleet != noone){
-            if(tempNode.fleetSlots[i].occupier != noone && tempNode.fleetSlots[i].occupier.player != global.selectedFleet.player){
-                //add another if for if they're allied before doing the following
-                fightController(global.selectedFleet,tempNode.fleetSlots[i].occupier)
+            if(tempNode.fleetSlots[i].occupier != noone){
+                //show_message(tempNode.fleetSlots[i].occupier.player)
+                if(tempNode.fleetSlots[i].occupier.player != global.selectedFleet.player){
+                
+                    if(tempNode.fleetSlots[i].occupier.player != global.selectedFleet.player){
+                        //add another if for if they're allied before doing the following
+                        results = fightController(global.selectedFleet,tempNode.fleetSlots[i].occupier)
+                        if(results == 0){
+                            break
+                        }
+                    }
+                }
             }
         }
     }

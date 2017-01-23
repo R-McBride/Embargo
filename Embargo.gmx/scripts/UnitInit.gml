@@ -8,6 +8,9 @@ movesLeft = unitSpeed
 
 created = false
 
+spacePower = irandom(3) + 2
+spaceHealth = spacePower
+
 
 tempNode = instance_nearest(x,y,Node)
 
