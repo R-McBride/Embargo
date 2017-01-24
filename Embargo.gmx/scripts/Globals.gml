@@ -1,6 +1,7 @@
 global.MAP_SIZE = 1000
 global.NUM_PLANETS = 80 //eventually we can make this a density variable based on map size
 global.NUM_PLAYERS = 8
+global.NUM_SHIP_TYPES = 4
 global.FOG_OF_WAR = true
 
 global.selectedNode = noone
@@ -117,6 +118,7 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
     global.IPOWER_NODE[i] = 0
     global.IPOWER_POP[i] = 0
     global.PSCORE[i] = 0
+    global.PSHIPS[i,global.NUM_SHIP_TYPES] = false
 
     //Starting Diplomacy
     for(ii = 1; ii <= global.NUM_PLAYERS; ii++)
@@ -124,3 +126,7 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
         global.DIPLOMACY[i,ii] = DIPLOMACY_TYPE.NEUTRAL
     }
 }
+
+global.purchButtonsExist = false
+
+

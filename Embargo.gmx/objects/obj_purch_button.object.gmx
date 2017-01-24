@@ -26,7 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>faction = global.FACTION[global.PLAYER]
+var hX = view_xview
+var hM = view_xview+view_wview
+var vX = view_yview
+var vM = view_yview+view_hview
+
 height = 50
+width = 50
+offset = 0
+
+cost = 0
 
 </string>
           </argument>
@@ -50,7 +59,14 @@ height = 50
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>draw_set_colour(c_black)
+draw_rectangle(hX + offset*20,vX + 30,hX + offset*20 + width,vX + 30 + height,false)
+draw_set_colour(c_white)
+//draw_line(hX + offset*20,vX + 30,hX + offset*20 + width,vX + 30 + height)
+draw_rectangle(hX + offset*20,vX + 30,hX + offset*20 + width,vX + 30 + height,true)
+
+//draw_sprite()
+</string>
           </argument>
         </arguments>
       </action>

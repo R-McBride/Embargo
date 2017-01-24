@@ -11,6 +11,9 @@ created = false
 spacePower = irandom(3) + 2
 spaceHealth = spacePower
 
+//sprite = noone
+//apparently we use sprite_index
+
 
 tempNode = instance_nearest(x,y,Node)
 

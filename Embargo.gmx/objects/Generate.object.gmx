@@ -104,17 +104,56 @@ if mouse_check_button_pressed(mb_left){
         i = instance_create(790,90,obj_button)
         i.type = VIEW_TYPE.GROWTH
         i.name = 'Growth'
-}
+    }
 }
 
 //check what you can do!
 if(global.selectedNode != noone){
     if(global.selectedNode.stationPresent == true &amp;&amp; global.selectedNode.stationSlot.player == global.PLAYER){
         global.CAN_BUY = true
+        //this needs to be streamlined, but it's the best way I can think of doing it right now
+        if(!global.purchButtonsExist){
+            
+            numButts = 0
+            //hehe butts
+            for(var i = 0; 0 &lt; global.NUM_SHIP_TYPES; i++){
+                if (global.PSHIPS[global.PLAYER,i]){
+                    newButt = instance_create(x,y,obj_purch_button)
+                    newButt.offset = numButts
+                    global.purchButtonsExist = true
+                    numButts++
+                    switch(i){
+                        case (0):
+                        newButt.cost = shipScout(3).cost
+                        break
+                        case (1):
+                        newButt.cost = shipFrigate(3).cost
+                        break
+                        case (2):
+                        newButt.cost = shipCruiser(3).cost
+                        break
+                        case (3):
+                        newButt.cost = shipBattleship(3).cost
+                        break
+                    }
+                }
+            }
+        }
     }
     else{
         global.CAN_BUY = false
+        with(obj_purch_button){
+            instance_destroy()
+        }
+        global.purchButtonsExist = false
     }
+}
+else{
+    global.CAN_BUY = false
+    with(obj_purch_button){
+        instance_destroy()
+    }
+    global.purchButtonsExist = false
 }
 
 </string>

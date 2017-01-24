@@ -30,7 +30,7 @@ case 0: //Initialize
 unitSpeed = 3
 canBlockade = false
 spacePower = 1
-image = 1
+image = 0
 break
 case 1: //Ability
 
@@ -52,7 +52,7 @@ case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
 spacePower = 3
-image = 1
+image = 0
 break
 case 1: //Ability
 
@@ -74,7 +74,7 @@ case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
 spacePower = 8
-image = 2
+image = 1
 break
 case 1: //Ability
 
@@ -96,7 +96,7 @@ case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
 spacePower = 20
-image = 3
+image = 2
 break
 case 1: //Ability
 
