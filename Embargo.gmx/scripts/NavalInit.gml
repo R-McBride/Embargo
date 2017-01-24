@@ -42,7 +42,7 @@ case 2: //Tooltip
 break
 case 3: //Production
 cost = 2
-
+type = 'scout'
 break
 }
 
@@ -64,7 +64,7 @@ case 2: //Tooltip
 break
 case 3: //Tooltip
 cost = 3
-
+type = 'frigate'
 break
 }
 
@@ -86,7 +86,7 @@ case 2: //Tooltip
 break
 case 3: //Tooltip
 cost = 5
-
+type = 'cruiser'
 break
 }
 
@@ -108,6 +108,6 @@ case 2: //Tooltip
 break
 case 3: //Tooltip
 cost = 9
-
+type = 'battleship'
 break
 }

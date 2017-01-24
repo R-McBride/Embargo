@@ -119,6 +119,11 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
     global.IPOWER_POP[i] = 0
     global.PSCORE[i] = 0
     global.PSHIPS[i,global.NUM_SHIP_TYPES] = false
+    
+    //testing init.  Eventually this needs to be updated to be faction specific
+    for(var j = 0; j < global.NUM_SHIP_TYPES; j++){
+        global.PSHIPS[i,j] = true
+    }
 
     //Starting Diplomacy
     for(ii = 1; ii <= global.NUM_PLAYERS; ii++)

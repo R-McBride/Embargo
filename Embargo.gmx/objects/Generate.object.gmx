@@ -116,7 +116,7 @@ if(global.selectedNode != noone){
             
             numButts = 0
             //hehe butts
-            for(var i = 0; 0 &lt; global.NUM_SHIP_TYPES; i++){
+            for(var i = 0; i &lt; global.NUM_SHIP_TYPES; i++){
                 if (global.PSHIPS[global.PLAYER,i]){
                     newButt = instance_create(x,y,obj_purch_button)
                     newButt.offset = numButts
@@ -124,16 +124,24 @@ if(global.selectedNode != noone){
                     numButts++
                     switch(i){
                         case (0):
-                        newButt.cost = shipScout(3).cost
+                        with(newButt){
+                            shipScout(3)
+                        }
                         break
                         case (1):
-                        newButt.cost = shipFrigate(3).cost
+                        with(newButt){
+                            shipFrigate(3)
+                        }
                         break
                         case (2):
-                        newButt.cost = shipCruiser(3).cost
+                        with(newButt){
+                            shipCruiser(3)
+                        }
                         break
                         case (3):
-                        newButt.cost = shipBattleship(3).cost
+                        with(newButt){
+                            shipBattleship(3)
+                        }
                         break
                     }
                 }
