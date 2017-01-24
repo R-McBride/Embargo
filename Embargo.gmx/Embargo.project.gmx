@@ -68,7 +68,7 @@
     <object>objects\Fleet</object>
     <object>objects\Station</object>
     <object>objects\obj_Camera</object>
-    <object>objects\object10</object>
+    <object>objects\obj_purch_button</object>
     <object>objects\object11</object>
     <object>objects\object12</object>
     <object>objects\obj_FleetSlot</object>

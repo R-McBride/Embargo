@@ -1,5 +1,5 @@
 #define NavalInit
-switch (argument0){
+/*switch (argument0){
     case(NAVAL_TYPE.SCOUT):
         unitSpeed = 3
         canBlockade = false
@@ -20,7 +20,9 @@ switch (argument0){
         canBlockade = true
         spacePower = 4
         break
-}
+}*/
+
+
 
 #define shipScout
 switch (argument0){
@@ -39,7 +41,7 @@ case 2: //Tooltip
 
 break
 case 3: //Production
-
+cost = 2
 
 break
 }
@@ -61,7 +63,7 @@ case 2: //Tooltip
 
 break
 case 3: //Tooltip
-
+cost = 3
 
 break
 }
@@ -83,7 +85,7 @@ case 2: //Tooltip
 
 break
 case 3: //Tooltip
-
+cost = 5
 
 break
 }
@@ -105,7 +107,7 @@ case 2: //Tooltip
 
 break
 case 3: //Tooltip
-
+cost = 9
 
 break
 }
