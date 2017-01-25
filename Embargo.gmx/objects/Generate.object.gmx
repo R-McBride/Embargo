@@ -105,6 +105,51 @@ if mouse_check_button_pressed(mb_left){
         i.type = VIEW_TYPE.GROWTH
         i.name = 'Growth'
     }
+    with(obj_purch_button){
+        if point_in_rectangle(mouse_x,mouse_y,view_xview + 10 + offset*55,view_yview + 30,view_xview + offset*55 + width,view_yview + 30 + height){
+            if(cost &lt;= global.CAPITAL[global.PLAYER] &amp;&amp; global.selectedNode != noone){
+            anyOwned = false
+            //check this planet to see if it has any fleets that are the same faction as the new ship
+                for(i = 1; i &lt; global.selectedNode.maxFleets; i++){
+                    if(global.selectedNode.fleetSlots[i].occupier != noone &amp;&amp; global.selectedNode.fleetSlots[i].occupier.player == global.PLAYER){
+                        anyOwned = true 
+                    }
+                }
+            //if the spots to build aren't full or there's a fleet to join, make a new ship
+                if(global.selectedNode.numFleetsPresent &lt; 3 || anyOwned = true){
+                //newUnit = instance_create(x,y,Unit)
+                newShip = instance_create(global.selectedNode.x,global.selectedNode.y,Navy)
+                    switch(type){
+                        case 'scout':
+                        with(newShip){
+                            //UnitInit()
+                            shipScout(0)
+                        }
+                        break
+                        case 'frigate':
+                        with(newShip){
+                            //UnitInit()
+                            shipFrigate(0)
+                        }
+                        break
+                        case 'cruiser':
+                        with(newShip){
+                            //UnitInit()
+                            shipCruiser(0)
+                        }
+                        break
+                        case 'battleship':
+                        with(newShip){
+                            //UnitInit()
+                            shipBattleship(0)
+                        }
+                        break
+                    }
+                    global.CAPITAL[global.PLAYER] -= cost
+                }
+            }
+        }
+    }
 }
 
 //check what you can do!

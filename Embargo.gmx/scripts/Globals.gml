@@ -109,6 +109,7 @@ for(i = 1; i <= global.NUM_PLAYERS; i++)
 {
     //Starting Faction
     global.FACTION[i] = i
+    //player's current total money
     global.CAPITAL[i] = 0
     global.POWER[i] = 0
     global.ICAPITAL[i] = 2

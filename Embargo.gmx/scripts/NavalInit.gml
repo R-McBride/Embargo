@@ -30,6 +30,7 @@ case 0: //Initialize
 unitSpeed = 3
 canBlockade = false
 spacePower = 1
+spaceHealth = 1
 image = 0
 break
 case 1: //Ability
@@ -52,6 +53,7 @@ case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
 spacePower = 3
+spaceHealth = 3
 image = 0
 break
 case 1: //Ability
@@ -74,6 +76,7 @@ case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
 spacePower = 8
+spaceHealth = 8
 image = 1
 break
 case 1: //Ability
@@ -95,6 +98,7 @@ switch (argument0){
 case 0: //Initialize
 unitSpeed = 2
 canBlockade = true
+spacePower = 20
 spacePower = 20
 image = 2
 break

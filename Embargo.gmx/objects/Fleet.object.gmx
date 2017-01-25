@@ -71,7 +71,7 @@
     global.selectedFleet = noone
 }
 ds_list_destroy(ships)
-show_message('alack!')
+//show_message('alack!')
 for(var i = 1; i &lt; position.maxFleets; i++){
     if(position.fleetSlots[i].occupier == id){
         position.fleetSlots[i].occupier = noone
